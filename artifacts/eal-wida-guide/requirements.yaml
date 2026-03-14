@@ -1,0 +1,18 @@
+packages:
+  "framer-motion": "For smooth scroll animations and engaging UI transitions"
+  "@radix-ui/react-accordion": "For accessible, animated FAQ sections"
+  "clsx": "For conditional class names"
+  "tailwind-merge": "For merging tailwind classes safely"
+  "lucide-react": "For UI icons"
+
+images:
+  - path: "artifacts/eal-wida-guide/public/images/hero-bg.png"
+    description: "Soft, warm abstract gradient background with playful, organic shapes in pastel blue, yellow, and green. Welcoming and educational aesthetic. Soft light leaks."
+    aspect_ratio: "16:9"
+  - path: "artifacts/eal-wida-guide/public/images/contact-bg.png"
+    description: "Gentle abstract watercolor wash in soft pastel teal and light orange, creating a soothing, encouraging background."
+    aspect_ratio: "16:9"
+
+notes:
+  - This app is completely static and informational.
+  - The form is purely illustrative to demonstrate polished input UI.

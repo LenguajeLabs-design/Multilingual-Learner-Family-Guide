@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "EAL Family Guide"
+version = "1.0.0"
+id = "artifacts/eal-wida-guide"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 21094
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/eal-wida-guide run dev"
+
+[services.env]
+PORT = "21094"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/eal-wida-guide", "run", "build"]
+publicDir = "artifacts/eal-wida-guide/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"

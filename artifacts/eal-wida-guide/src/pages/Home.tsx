@@ -1,45 +1,83 @@
+import { useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { LevelCard } from "@/components/sections/LevelCard";
-import { FaqSection } from "@/components/sections/FaqSection";
-import { ContactTeacher } from "@/components/sections/ContactTeacher";
-import { WIDA_LEVELS } from "@/data/wida-content";
+import { LevelSelector } from "@/components/sections/LevelSelector";
+import { LevelDetail } from "@/components/sections/LevelDetail";
+import { ProgressSection } from "@/components/sections/ProgressSection";
+import { TeacherNote } from "@/components/sections/TeacherNote";
+import { WIDA_LEVELS, TRANSLATIONS } from "@/data/wida-content";
 import { motion } from "framer-motion";
 
 export default function Home() {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      
-      <main className="flex-1">
-        <HeroSection />
-        
-        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto" id="levels">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-display font-extrabold text-slate-900 mb-6">
-              The 6 Levels of English
-            </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto text-balance">
-              Scroll through the levels below to understand what your child is learning at each stage, and how you can celebrate their progress!
-            </p>
-          </div>
+  const [lang, setLang] = useState("en");
+  const [selectedLevelId, setSelectedLevelId] = useState<1|2|3|4|5|6>(1);
 
-          <div className="space-y-12 relative">
-            {/* Visual connecting line for timeline effect */}
-            <div className="absolute left-8 sm:left-12 top-10 bottom-10 w-1 bg-gradient-to-b from-sky-200 via-amber-200 to-indigo-200 hidden lg:block -z-10 rounded-full" />
-            
-            {WIDA_LEVELS.map((level, index) => (
-              <LevelCard key={level.id} level={level} index={index} />
-            ))}
-          </div>
+  const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
+  const selectedLevel = WIDA_LEVELS.find(l => l.id === selectedLevelId)!;
+
+  const handlePrint = () => {
+    window.print();
+  };
+
+  return (
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
+      <Navbar lang={lang} setLang={setLang} onPrint={handlePrint} t={t} />
+      
+      <main className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 flex flex-col gap-14">
+        {/* Hero Section */}
+        <section className="text-center space-y-6 no-print">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm mx-auto"
+          >
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="text-sm font-semibold text-slate-600 uppercase tracking-widest">EAL Guide</span>
+          </motion.div>
+          <motion.h1 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 text-balance"
+          >
+            {t.appTitle}
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed text-balance"
+          >
+            {t.appSubtitle}
+          </motion.p>
         </section>
 
-        <FaqSection />
-        <ContactTeacher />
+        {/* Level Selector */}
+        <section className="no-print w-full max-w-4xl mx-auto">
+          <h2 className="text-lg font-bold mb-6 text-center text-slate-700 uppercase tracking-wider">{t.selectLevel}</h2>
+          <LevelSelector 
+            levels={WIDA_LEVELS} 
+            selectedId={selectedLevelId} 
+            onSelect={setSelectedLevelId} 
+          />
+        </section>
+
+        {/* Level Detail */}
+        <div className="w-full">
+          <LevelDetail 
+            level={selectedLevel} 
+            t={t} 
+          />
+        </div>
+
+        {/* Progress & Teacher Note */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+          <ProgressSection t={t} />
+          <TeacherNote t={t} />
+        </div>
       </main>
 
-      <Footer />
+      <Footer t={t} />
     </div>
   );
 }

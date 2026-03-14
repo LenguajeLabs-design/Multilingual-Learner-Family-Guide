@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Quicksand:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: 'Nunito', sans-serif;
-  --font-display: 'Quicksand', sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Inter', system-ui, sans-serif;
 
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -26,50 +26,30 @@
   
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
-
-  --color-level-1: hsl(var(--level-1));
-  --color-level-2: hsl(var(--level-2));
-  --color-level-3: hsl(var(--level-3));
-  --color-level-4: hsl(var(--level-4));
-  --color-level-5: hsl(var(--level-5));
-  --color-level-6: hsl(var(--level-6));
 }
 
 :root {
-  /* Warm, welcoming cream background */
-  --background: 40 33% 98%;
-  --foreground: 222 47% 15%;
+  --background: 40 30% 97%;
+  --foreground: 220 15% 20%;
   
-  /* Soft, friendly blue as primary */
-  --primary: 210 100% 50%;
+  --primary: 217 70% 55%;
   --primary-foreground: 0 0% 100%;
   
-  /* Warm secondary tone */
-  --secondary: 40 80% 90%;
-  --secondary-foreground: 24 10% 10%;
+  --secondary: 40 20% 90%;
+  --secondary-foreground: 220 15% 20%;
   
-  /* Muted colors for backgrounds and borders */
-  --muted: 40 20% 92%;
-  --muted-foreground: 215 16% 47%;
+  --muted: 40 10% 92%;
+  --muted-foreground: 220 10% 45%;
   
-  /* Warm orange accent */
-  --accent: 24 95% 58%;
+  --accent: 217 70% 55%;
   --accent-foreground: 0 0% 100%;
   
   --border: 40 20% 88%;
   --input: 40 20% 92%;
-  --ring: 210 100% 50%;
+  --ring: 217 70% 55%;
   
   --card: 0 0% 100%;
-  --card-foreground: 222 47% 15%;
-
-  /* Custom Level Colors - encouraging and bright */
-  --level-1: 199 89% 48%; /* Soft bright blue */
-  --level-2: 152 69% 31%; /* Encouraging green */
-  --level-3: 45 93% 47%;  /* Warm sunny yellow */
-  --level-4: 24 95% 53%;  /* Bright orange */
-  --level-5: 180 100% 30%; /* Vibrant teal */
-  --level-6: 250 85% 60%; /* Triumphant indigo */
+  --card-foreground: 220 15% 20%;
 }
 
 @layer base {
@@ -81,15 +61,32 @@
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
-    @apply font-bold tracking-tight text-slate-800;
+    @apply font-bold tracking-tight text-slate-900;
+  }
+}
+
+@media print {
+  @page {
+    margin: 1.5cm;
+  }
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    background: white !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-break-inside-avoid {
+    break-inside: avoid;
   }
 }
 
 @layer utilities {
-  .glass-card {
-    @apply bg-white/70 backdrop-blur-md border border-white/40 shadow-xl shadow-slate-200/50;
-  }
-  .text-balance {
-    text-wrap: balance;
+  .print-only {
+    display: none;
   }
 }

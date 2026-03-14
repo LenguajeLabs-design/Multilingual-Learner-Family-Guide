@@ -5,7 +5,7 @@ import { LevelSelector } from "@/components/sections/LevelSelector";
 import { LevelDetail } from "@/components/sections/LevelDetail";
 import { ProgressSection } from "@/components/sections/ProgressSection";
 import { TeacherNote } from "@/components/sections/TeacherNote";
-import { WIDA_LEVELS, TRANSLATIONS } from "@/data/wida-content";
+import { getLevels, TRANSLATIONS } from "@/data/wida-content";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -13,7 +13,8 @@ export default function Home() {
   const [selectedLevelId, setSelectedLevelId] = useState<1|2|3|4|5|6>(1);
 
   const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
-  const selectedLevel = WIDA_LEVELS.find(l => l.id === selectedLevelId)!;
+  const levels = getLevels(lang);
+  const selectedLevel = levels.find(l => l.id === selectedLevelId)!;
 
   const handlePrint = () => {
     window.print();
@@ -56,7 +57,7 @@ export default function Home() {
         <section className="no-print w-full max-w-4xl mx-auto">
           <h2 className="text-lg font-bold mb-6 text-center text-slate-700 uppercase tracking-wider">{t.selectLevel}</h2>
           <LevelSelector 
-            levels={WIDA_LEVELS} 
+            levels={levels} 
             selectedId={selectedLevelId} 
             onSelect={setSelectedLevelId} 
           />

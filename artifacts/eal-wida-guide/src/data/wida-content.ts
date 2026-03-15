@@ -13,6 +13,7 @@ export type WIDALevelContent = {
   supports: string[];
   homeTips: string[];
   encouragement: string;
+  exitNote?: string;
 };
 
 export type WIDALevelStyle = {
@@ -21,6 +22,8 @@ export type WIDALevelStyle = {
   accent: string;
   border: string;
   badge: string;
+  isExitLevel?: boolean;
+  isContinuum?: boolean;
 };
 
 export type WIDALevel = WIDALevelStyle & WIDALevelContent;
@@ -29,9 +32,9 @@ const WIDA_STYLES: WIDALevelStyle[] = [
   { id: 1, color: "bg-[#EEF0F7]", accent: "text-[#142550]", border: "border-[#C4CCE0]", badge: "bg-[#142550]" },
   { id: 2, color: "bg-[#FCE8EA]", accent: "text-[#C82C39]", border: "border-[#F0BCBF]", badge: "bg-[#C82C39]" },
   { id: 3, color: "bg-[#E1E5F3]", accent: "text-[#142550]", border: "border-[#B4BDD8]", badge: "bg-[#142550]" },
-  { id: 4, color: "bg-[#FAE0E2]", accent: "text-[#C82C39]", border: "border-[#EDB0B4]", badge: "bg-[#C82C39]" },
-  { id: 5, color: "bg-[#D4DBF0]", accent: "text-[#142550]", border: "border-[#A5B0D3]", badge: "bg-[#142550]" },
-  { id: 6, color: "bg-[#F7D5D8]", accent: "text-[#C82C39]", border: "border-[#E8A5AA]", badge: "bg-[#142550]" },
+  { id: 4, color: "bg-[#FAE0E2]", accent: "text-[#C82C39]", border: "border-[#EDB0B4]", badge: "bg-[#C82C39]", isExitLevel: true },
+  { id: 5, color: "bg-[#D4DBF0]", accent: "text-[#142550]", border: "border-[#A5B0D3]", badge: "bg-[#142550]", isContinuum: true },
+  { id: 6, color: "bg-[#F7D5D8]", accent: "text-[#C82C39]", border: "border-[#E8A5AA]", badge: "bg-[#142550]", isContinuum: true },
 ];
 
 const LEVEL_CONTENT_BY_LANG: Record<string, WIDALevelContent[]> = {
@@ -139,6 +142,7 @@ const LEVEL_CONTENT_BY_LANG: Record<string, WIDALevelContent[]> = {
         "Celebrate their independence — they are doing more on their own every day",
       ],
       encouragement: "Your child's English is becoming a real strength. They are doing remarkable things.",
+      exitNote: "At our school, students typically exit the EAL program around WIDA Level 4.0 once they demonstrate independence with grade-level learning tasks. Teachers continue monitoring progress after exit to ensure students remain successful.",
     },
     {
       name: "Bridging",
@@ -297,6 +301,7 @@ const LEVEL_CONTENT_BY_LANG: Record<string, WIDALevelContent[]> = {
         "자녀의 독립심을 축하하세요 — 매일 스스로 더 많은 것을 해내고 있습니다",
       ],
       encouragement: "자녀의 영어가 진정한 강점이 되고 있습니다. 정말 놀라운 일들을 해내고 있습니다.",
+      exitNote: "저희 학교에서는 학생이 학년 수준의 학습 과제를 독립적으로 수행할 수 있음을 보여줄 때 WIDA 레벨 4.0 전후로 EAL 프로그램을 졸업하는 것이 일반적입니다. 교사들은 졸업 후에도 학생의 지속적인 성공을 위해 발전 상황을 계속 모니터링합니다.",
     },
     {
       name: "연결",
@@ -455,6 +460,7 @@ const LEVEL_CONTENT_BY_LANG: Record<string, WIDALevelContent[]> = {
         "庆祝孩子的独立性——他们每天都在自己做更多事情",
       ],
       encouragement: "孩子的英语正在成为真正的优势。他们正在做令人惊叹的事情。",
+      exitNote: "在我们学校，当学生能够独立完成年级水平的学习任务时，通常会在WIDA 4.0级左右退出EAL项目。退出后，教师会继续监测学生的进步情况，以确保他们保持良好的学习表现。",
     },
     {
       name: "衔接",
@@ -613,6 +619,7 @@ const LEVEL_CONTENT_BY_LANG: Record<string, WIDALevelContent[]> = {
         "Celebre su independencia — están haciendo más por sí mismos cada día",
       ],
       encouragement: "El inglés de su hijo se está convirtiendo en una verdadera fortaleza. Están haciendo cosas notables.",
+      exitNote: "En nuestra escuela, los estudiantes generalmente salen del programa EAL alrededor del nivel WIDA 4.0 una vez que demuestran independencia con las tareas de aprendizaje del nivel de grado. Los maestros continúan monitoreando el progreso después de la salida para asegurarse de que los estudiantes sigan siendo exitosos.",
     },
     {
       name: "Conectando",
@@ -692,6 +699,11 @@ type Translations = {
     printButton: string;
     disclaimer: string;
     encouragementLabel: string;
+    exitLevelSubtitle: string;
+    exitLevelBadge: string;
+    continuumNote: string;
+    schoolPolicyTitle: string;
+    schoolPolicyBullets: string[];
   };
 };
 
@@ -708,12 +720,21 @@ export const TRANSLATIONS: Translations = {
     supportsTitle: "What helps at school",
     homeTipsTitle: "How you can help at home",
     progressTitle: "What to know about progress over time",
-    progressBody: "Every child develops English at their own pace. Research suggests conversational English may develop in 3–5 years, while academic English — the kind used in textbooks and tests — often takes 4–7 years or more. WIDA levels describe where your child is right now, not a fixed timeline.",
+    progressBody: "Every child develops English at their own pace. Research suggests conversational English may develop in 3–5 years, while academic English — the kind used in textbooks and tests — often takes 4–7 years or more. WIDA levels describe where your child is right now, not a fixed timeline. WIDA levels describe language development, while school program exit decisions may be based on local criteria.",
     teacherNoteTitle: "A note from your child's teacher",
     teacherNotePlaceholder: "Teachers: Add a personal note for this family before printing.",
     printButton: "Print Summary",
     disclaimer: "This tool provides general guidance and does not replace school-based assessment or teacher judgment.",
     encouragementLabel: "A note of encouragement",
+    exitLevelSubtitle: "Typical EAL Exit Level at Our School",
+    exitLevelBadge: "Exit Level",
+    continuumNote: "Levels 5 and 6 are part of the broader WIDA continuum. They are not required for local EAL program exit, but describe continued growth toward full academic English proficiency.",
+    schoolPolicyTitle: "About our school's EAL exit process",
+    schoolPolicyBullets: [
+      "Students typically exit the EAL program around WIDA Level 4.0.",
+      "Exit decisions consider classroom performance, language use, and teacher input — not WIDA score alone.",
+      "Language continues to develop after program exit. Teachers monitor student progress.",
+    ],
   },
   ko: {
     appTitle: "WIDA 가족 가이드",
@@ -727,12 +748,21 @@ export const TRANSLATIONS: Translations = {
     supportsTitle: "학교에서 도움이 되는 것",
     homeTipsTitle: "가정에서 도울 수 있는 방법",
     progressTitle: "시간 경과에 따른 발전에 대해 알아야 할 사항",
-    progressBody: "모든 어린이는 각자의 속도에 맞춰 영어를 발달시킵니다. 연구에 따르면 일상 회화 영어는 3~5년 안에 발달할 수 있지만, 교과서와 시험에 사용되는 학문적 영어는 종종 4~7년 이상 걸릴 수 있습니다. WIDA 레벨은 자녀의 현재 상태를 설명하는 것이지 정해진 일정을 나타내는 것이 아닙니다.",
+    progressBody: "모든 어린이는 각자의 속도에 맞춰 영어를 발달시킵니다. 연구에 따르면 일상 회화 영어는 3~5년 안에 발달할 수 있지만, 교과서와 시험에 사용되는 학문적 영어는 종종 4~7년 이상 걸릴 수 있습니다. WIDA 레벨은 자녀의 현재 상태를 설명하는 것이지 정해진 일정을 나타내는 것이 아닙니다. WIDA 레벨은 언어 발달을 설명하며, 학교 프로그램 졸업 결정은 현지 기준에 따라 달라질 수 있습니다.",
     teacherNoteTitle: "선생님의 메시지",
     teacherNotePlaceholder: "교사: 인쇄하기 전에 가족을 위한 개인 메시지를 추가하세요.",
     printButton: "요약 인쇄",
     disclaimer: "이 도구는 일반적인 지침을 제공하며 학교 평가나 교사의 판단을 대체하지 않습니다.",
     encouragementLabel: "격려의 말",
+    exitLevelSubtitle: "저희 학교의 일반적인 EAL 졸업 레벨",
+    exitLevelBadge: "졸업 레벨",
+    continuumNote: "레벨 5와 6은 WIDA의 더 넓은 연속 척도의 일부입니다. 학교 EAL 프로그램 졸업에 필수적이지는 않지만, 완전한 학문적 영어 능숙도를 향한 지속적인 성장을 나타냅니다.",
+    schoolPolicyTitle: "저희 학교 EAL 졸업 과정에 대하여",
+    schoolPolicyBullets: [
+      "학생들은 일반적으로 WIDA 레벨 4.0 전후로 EAL 프로그램을 졸업합니다.",
+      "졸업 결정은 WIDA 점수만이 아니라 수업 성취도, 언어 사용 능력, 교사 의견을 종합적으로 고려합니다.",
+      "언어 발달은 프로그램 졸업 후에도 계속됩니다. 교사들이 학생의 진도를 모니터링합니다.",
+    ],
   },
   zh: {
     appTitle: "WIDA 家庭指南",
@@ -746,12 +776,21 @@ export const TRANSLATIONS: Translations = {
     supportsTitle: "在学校的帮助",
     homeTipsTitle: "您在家的帮助",
     progressTitle: "关于随着时间进步的须知",
-    progressBody: "每个孩子学习英语的速度都不同。研究表明，日常会话英语可能需要3-5年才能掌握，而学术英语（用于教科书和考试中的英语）通常需要4-7年或更长时间。WIDA水平描述的是您孩子目前所处的阶段，而不是固定的时间表。",
+    progressBody: "每个孩子学习英语的速度都不同。研究表明，日常会话英语可能需要3-5年才能掌握，而学术英语（用于教科书和考试中的英语）通常需要4-7年或更长时间。WIDA水平描述的是您孩子目前所处的阶段，而不是固定的时间表。WIDA水平描述语言发展，而学校项目退出决定可能基于当地标准。",
     teacherNoteTitle: "来自孩子老师的留言",
     teacherNotePlaceholder: "老师：请在打印前为该家庭添加个人留言。",
     printButton: "打印摘要",
     disclaimer: "此工具提供一般指导，不能替代学校的评估或老师的判断。",
     encouragementLabel: "鼓励的话",
+    exitLevelSubtitle: "我们学校的典型EAL退出级别",
+    exitLevelBadge: "退出级别",
+    continuumNote: "5级和6级是更广泛的WIDA连续体的一部分。它们不是当地EAL项目退出的必要条件，但描述了向完全学术英语水平持续进步的过程。",
+    schoolPolicyTitle: "关于我们学校的EAL退出流程",
+    schoolPolicyBullets: [
+      "学生通常在WIDA 4.0级左右退出EAL项目。",
+      "退出决定综合考虑课堂表现、语言使用情况和教师意见，而不仅仅是WIDA分数。",
+      "退出项目后语言仍在持续发展。教师会监测学生的进步情况。",
+    ],
   },
   es: {
     appTitle: "Guía Familiar de WIDA",
@@ -765,11 +804,20 @@ export const TRANSLATIONS: Translations = {
     supportsTitle: "Qué ayuda en la escuela",
     homeTipsTitle: "Cómo puede ayudar en casa",
     progressTitle: "Lo que debe saber sobre el progreso",
-    progressBody: "Cada niño desarrolla el inglés a su propio ritmo. Las investigaciones sugieren que el inglés conversacional puede desarrollarse en 3 a 5 años, mientras que el inglés académico, el que se usa en libros de texto y exámenes, a menudo toma de 4 a 7 años o más. Los niveles de WIDA describen dónde está su hijo ahora mismo, no un plazo fijo.",
+    progressBody: "Cada niño desarrolla el inglés a su propio ritmo. Las investigaciones sugieren que el inglés conversacional puede desarrollarse en 3 a 5 años, mientras que el inglés académico, el que se usa en libros de texto y exámenes, a menudo toma de 4 a 7 años o más. Los niveles de WIDA describen dónde está su hijo ahora mismo, no un plazo fijo. Los niveles WIDA describen el desarrollo del idioma, mientras que las decisiones de salida del programa escolar pueden basarse en criterios locales.",
     teacherNoteTitle: "Una nota del maestro de su hijo",
     teacherNotePlaceholder: "Maestros: Agreguen una nota personal para esta familia antes de imprimir.",
     printButton: "Imprimir resumen",
     disclaimer: "Esta herramienta proporciona orientación general y no reemplaza la evaluación escolar ni el juicio del maestro.",
     encouragementLabel: "Una nota de ánimo",
+    exitLevelSubtitle: "Nivel típico de salida EAL en nuestra escuela",
+    exitLevelBadge: "Nivel de salida",
+    continuumNote: "Los niveles 5 y 6 forman parte del continuo más amplio de WIDA. No son necesarios para la salida del programa EAL local, pero describen el crecimiento continuo hacia el dominio pleno del inglés académico.",
+    schoolPolicyTitle: "Sobre el proceso de salida EAL de nuestra escuela",
+    schoolPolicyBullets: [
+      "Los estudiantes generalmente salen del programa EAL alrededor del nivel WIDA 4.0.",
+      "Las decisiones de salida consideran el rendimiento en el aula, el uso del idioma y la opinión del maestro, no solo la puntuación WIDA.",
+      "El idioma continúa desarrollándose después de salir del programa. Los maestros monitorean el progreso del estudiante.",
+    ],
   },
 };

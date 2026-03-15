@@ -7,15 +7,15 @@ export function TeacherNote({ t }: { t: any }) {
   return (
     <div className={`bg-white border border-slate-200 shadow-sm rounded-3xl p-6 sm:p-8 md:p-10 h-full flex flex-col print-break-inside-avoid ${note.trim() === "" ? "print-only:hidden" : ""}`}>
       <div className="flex items-center gap-4 mb-6 no-print">
-        <div className="p-3 bg-amber-50 text-amber-600 rounded-xl shadow-sm border border-amber-100/50">
+        <div className="p-3 rounded-xl shadow-sm border border-slate-100" style={{ background: "#EEF0F7", color: "#142550" }}>
           <PenLine className="w-6 h-6" />
         </div>
-        <h3 className="font-bold text-xl md:text-2xl text-slate-900 tracking-tight">{t.teacherNoteTitle}</h3>
+        <h3 className="font-semibold text-xl md:text-2xl tracking-wide uppercase">{t.teacherNoteTitle}</h3>
       </div>
       
       {/* Print view header */}
       <div className="hidden print-only mb-4">
-        <h3 className="font-bold text-xl text-slate-900 border-b pb-3">{t.teacherNoteTitle}</h3>
+        <h3 className="font-semibold text-xl border-b pb-3 tracking-wide uppercase">{t.teacherNoteTitle}</h3>
       </div>
 
       <div className="flex-1 flex flex-col">

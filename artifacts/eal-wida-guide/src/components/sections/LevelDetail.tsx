@@ -20,25 +20,25 @@ export function LevelDetail({ level, t }: { level: WIDALevel, t: any }) {
       >
         <div className="mb-10 text-center sm:text-left">
           <div className="print-only mb-6 hidden">
-            <h1 className="text-3xl font-extrabold text-slate-900 border-b pb-4">
+            <h1 className="text-3xl font-extrabold border-b pb-4 uppercase tracking-widest">
               {t.appTitle} — {t.levelLabel} {level.id}: {level.name}
             </h1>
           </div>
           
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
-            <span className={cn("inline-flex self-center sm:self-auto px-4 py-1.5 rounded-full text-white text-sm font-bold shadow-sm", level.badge)}>
+            <span className={cn("inline-flex self-center sm:self-auto px-4 py-1.5 rounded-full text-white text-sm font-bold shadow-sm tracking-wider uppercase", level.badge)}>
               {t.levelLabel} {level.id}
             </span>
-            <span className={cn("font-bold text-2xl tracking-tight", level.accent)}>
+            <span className={cn("font-bold text-2xl tracking-widest uppercase", level.accent)}>
               {level.name}
             </span>
           </div>
           
-          <h3 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight max-w-3xl text-balance">
+          <h3 className="text-3xl md:text-4xl font-extrabold mb-6 leading-tight max-w-3xl text-balance" style={{ color: "#142550", letterSpacing: "0.01em", textTransform: "none" }}>
             {level.tagline}
           </h3>
           
-          <p className="text-slate-700 text-lg sm:text-xl leading-relaxed max-w-4xl text-balance">
+          <p className="text-slate-700 text-lg sm:text-xl leading-relaxed max-w-4xl text-balance font-normal">
             {level.description}
           </p>
         </div>
@@ -52,7 +52,7 @@ export function LevelDetail({ level, t }: { level: WIDALevel, t: any }) {
               <div className={cn("p-2 rounded-lg", level.color)}>
                 <CheckCircle2 className={cn("w-5 h-5", level.accent)} />
               </div>
-              <h4 className="text-xl font-bold text-slate-900">{t.supportsTitle}</h4>
+              <h4 className="text-base font-semibold tracking-wider uppercase">{t.supportsTitle}</h4>
             </div>
             <ul className="space-y-4">
               {level.supports.map((support, idx) => (
@@ -70,7 +70,7 @@ export function LevelDetail({ level, t }: { level: WIDALevel, t: any }) {
               <div className={cn("p-2 rounded-lg", level.color)}>
                 <HeartHandshake className={cn("w-5 h-5", level.accent)} />
               </div>
-              <h4 className="text-xl font-bold text-slate-900">{t.homeTipsTitle}</h4>
+              <h4 className="text-base font-semibold tracking-wider uppercase">{t.homeTipsTitle}</h4>
             </div>
             <ul className="space-y-4">
               {level.homeTips.map((tip, idx) => (

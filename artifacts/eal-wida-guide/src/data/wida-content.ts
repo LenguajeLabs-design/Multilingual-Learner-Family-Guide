@@ -26,12 +26,12 @@ export type WIDALevelStyle = {
 export type WIDALevel = WIDALevelStyle & WIDALevelContent;
 
 const WIDA_STYLES: WIDALevelStyle[] = [
-  { id: 1, color: "bg-sky-100",     accent: "text-sky-700",     border: "border-sky-300",     badge: "bg-sky-600"    },
-  { id: 2, color: "bg-emerald-100", accent: "text-emerald-700", border: "border-emerald-300", badge: "bg-emerald-600"},
-  { id: 3, color: "bg-amber-100",   accent: "text-amber-700",   border: "border-amber-300",   badge: "bg-amber-500"  },
-  { id: 4, color: "bg-orange-100",  accent: "text-orange-700",  border: "border-orange-300",  badge: "bg-orange-500" },
-  { id: 5, color: "bg-teal-100",    accent: "text-teal-700",    border: "border-teal-300",    badge: "bg-teal-600"   },
-  { id: 6, color: "bg-indigo-100",  accent: "text-indigo-700",  border: "border-indigo-300",  badge: "bg-indigo-600" },
+  { id: 1, color: "bg-[#EEF0F7]", accent: "text-[#142550]", border: "border-[#C4CCE0]", badge: "bg-[#142550]" },
+  { id: 2, color: "bg-[#FCE8EA]", accent: "text-[#C82C39]", border: "border-[#F0BCBF]", badge: "bg-[#C82C39]" },
+  { id: 3, color: "bg-[#E1E5F3]", accent: "text-[#142550]", border: "border-[#B4BDD8]", badge: "bg-[#142550]" },
+  { id: 4, color: "bg-[#FAE0E2]", accent: "text-[#C82C39]", border: "border-[#EDB0B4]", badge: "bg-[#C82C39]" },
+  { id: 5, color: "bg-[#D4DBF0]", accent: "text-[#142550]", border: "border-[#A5B0D3]", badge: "bg-[#142550]" },
+  { id: 6, color: "bg-[#F7D5D8]", accent: "text-[#C82C39]", border: "border-[#E8A5AA]", badge: "bg-[#142550]" },
 ];
 
 const LEVEL_CONTENT_BY_LANG: Record<string, WIDALevelContent[]> = {

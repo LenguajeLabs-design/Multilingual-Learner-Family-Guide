@@ -10,7 +10,7 @@ export function ProgressSection({ t }: { t: any }) {
           <div className="p-3 bg-white text-primary rounded-xl shadow-sm border border-slate-100">
             <Info className="w-6 h-6" />
           </div>
-          <h3 className="font-bold text-xl md:text-2xl text-slate-900 tracking-tight">{t.progressTitle}</h3>
+          <h3 className="font-semibold text-xl md:text-2xl tracking-wide uppercase">{t.progressTitle}</h3>
         </div>
         <p className="text-slate-700 text-lg leading-relaxed text-balance">
           {t.progressBody}

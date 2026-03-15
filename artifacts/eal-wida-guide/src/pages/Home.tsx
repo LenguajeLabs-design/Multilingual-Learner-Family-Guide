@@ -39,7 +39,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 text-balance"
+            className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-balance"
           >
             {t.appTitle}
           </motion.h1>
@@ -47,7 +47,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed text-balance"
+            className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed text-balance font-normal"
           >
             {t.appSubtitle}
           </motion.p>
@@ -55,7 +55,7 @@ export default function Home() {
 
         {/* Level Selector */}
         <section className="no-print w-full max-w-4xl mx-auto">
-          <h2 className="text-lg font-bold mb-6 text-center text-slate-700 uppercase tracking-wider">{t.selectLevel}</h2>
+          <h2 className="text-sm mb-6 text-center">{t.selectLevel}</h2>
           <LevelSelector 
             levels={levels} 
             selectedId={selectedLevelId} 

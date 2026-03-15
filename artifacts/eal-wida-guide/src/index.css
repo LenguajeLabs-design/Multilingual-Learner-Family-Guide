@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-display: 'Inter', system-ui, sans-serif;
+  --font-sans: 'Montserrat', system-ui, sans-serif;
+  --font-display: 'Montserrat', system-ui, sans-serif;
 
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -30,26 +29,28 @@
 
 :root {
   --background: 40 30% 97%;
-  --foreground: 220 15% 20%;
-  
-  --primary: 217 70% 55%;
+  --foreground: 223 60% 12%;
+
+  /* School navy #142550 → hsl(223, 60%, 20%) */
+  --primary: 223 60% 20%;
   --primary-foreground: 0 0% 100%;
-  
-  --secondary: 40 20% 90%;
-  --secondary-foreground: 220 15% 20%;
-  
+
+  --secondary: 223 20% 92%;
+  --secondary-foreground: 223 60% 20%;
+
   --muted: 40 10% 92%;
   --muted-foreground: 220 10% 45%;
-  
-  --accent: 217 70% 55%;
+
+  /* School red #C82C39 → hsl(355, 63%, 48%) */
+  --accent: 355 63% 48%;
   --accent-foreground: 0 0% 100%;
-  
+
   --border: 40 20% 88%;
   --input: 40 20% 92%;
-  --ring: 217 70% 55%;
-  
+  --ring: 223 60% 20%;
+
   --card: 0 0% 100%;
-  --card-foreground: 220 15% 20%;
+  --card-foreground: 223 60% 12%;
 }
 
 @layer base {
@@ -57,11 +58,40 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground antialiased font-sans selection:bg-primary/20 selection:text-primary;
+    @apply bg-background text-foreground antialiased font-sans;
+    font-weight: 400;
+    selection-color: #142550;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1 {
     font-family: var(--font-display);
-    @apply font-bold tracking-tight text-slate-900;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #142550;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #142550;
+  }
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    color: #142550;
+  }
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #142550;
+  }
+  h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: #142550;
   }
 }
 

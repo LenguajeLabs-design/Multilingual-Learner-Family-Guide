@@ -1,0 +1,14 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "t8skjc3DkCcJd_c4Shc5i"
+uri = "file://artifacts/eal-wida-guide/public/logo-icon.svg"
+type = "image"
+title = "WIDA Family Guide — Square Icon Logo"
+
+[[outputs]]
+id = "orOCj0gjbnu80RuMgPzCi"
+uri = "file://artifacts/eal-wida-guide/public/logo-full.svg"
+type = "image"
+title = "WIDA Family Guide — Full Horizontal Logo"

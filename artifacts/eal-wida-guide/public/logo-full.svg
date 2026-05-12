@@ -1,0 +1,27 @@
+<svg width="960" height="280" viewBox="0 0 960 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="960" height="280" rx="32" fill="#142550"/>
+  <!-- Red accent stripe -->
+  <rect x="0" y="220" width="960" height="60" rx="0" fill="#C82C39"/>
+  <rect x="0" y="196" width="960" height="64" rx="32" fill="#C82C39"/>
+  <!-- Icon background circle -->
+  <circle cx="130" cy="126" r="72" fill="white" opacity="0.12"/>
+  <!-- Open book icon -->
+  <path d="M130 74 C130 74 90 80 74 98 C70 102 68 108 68 114 L68 178 C68 178 94 166 130 168 L130 74Z" fill="white" opacity="0.95"/>
+  <path d="M130 74 C130 74 170 80 186 98 C190 102 192 108 192 114 L192 178 C192 178 166 166 130 168 L130 74Z" fill="white" opacity="0.7"/>
+  <rect x="127" y="72" width="6" height="100" rx="3" fill="white" opacity="0.5"/>
+  <!-- Page lines left -->
+  <line x1="86" y1="120" x2="123" y2="116" stroke="#142550" stroke-width="5" stroke-linecap="round" opacity="0.3"/>
+  <line x1="86" y1="136" x2="123" y2="132" stroke="#142550" stroke-width="5" stroke-linecap="round" opacity="0.3"/>
+  <line x1="86" y1="152" x2="123" y2="149" stroke="#142550" stroke-width="5" stroke-linecap="round" opacity="0.3"/>
+  <!-- Page lines right -->
+  <line x1="137" y1="116" x2="174" y2="120" stroke="#142550" stroke-width="5" stroke-linecap="round" opacity="0.3"/>
+  <line x1="137" y1="132" x2="174" y2="136" stroke="#142550" stroke-width="5" stroke-linecap="round" opacity="0.3"/>
+  <line x1="137" y1="149" x2="174" y2="152" stroke="#142550" stroke-width="5" stroke-linecap="round" opacity="0.3"/>
+  <!-- Main title -->
+  <text x="232" y="96" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="58" font-weight="800" fill="white" letter-spacing="3">WIDA FAMILY GUIDE</text>
+  <!-- Subtitle -->
+  <text x="234" y="148" font-family="'Montserrat', Arial, sans-serif" font-size="24" font-weight="400" fill="white" opacity="0.65" letter-spacing="1">Multilingual EAL Family Support Tool</text>
+  <!-- Red bar text -->
+  <text x="232" y="238" font-family="'Montserrat', Arial, sans-serif" font-size="20" font-weight="600" fill="white" letter-spacing="2" opacity="0.9">Created by Freddie Orozco  ·  © 2026 All Rights Reserved</text>
+</svg>

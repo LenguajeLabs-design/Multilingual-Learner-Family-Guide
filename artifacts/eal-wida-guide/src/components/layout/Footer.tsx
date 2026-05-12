@@ -15,7 +15,8 @@ export function Footer({ t }: { t: any }) {
             className="w-10 h-10 rounded-xl shadow-sm opacity-80"
           />
           <p className="font-semibold text-slate-700 text-left leading-snug">
-            Created by Freddie Orozco
+            Created by Federico Orozco&nbsp;|&nbsp;Lenguaje Labs
+            <span className="block text-xs font-normal text-slate-500">Based on the WIDA ELD Standards Framework</span>
             <span className="block text-xs font-normal text-slate-400">&copy; 2026 Freddie Orozco. All rights reserved.</span>
           </p>
         </div>

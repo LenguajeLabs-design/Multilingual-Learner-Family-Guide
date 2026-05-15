@@ -17,7 +17,8 @@ export function Footer({ t }: { t: any }) {
           <p className="font-semibold text-slate-700 text-left leading-snug">
             Created by Federico Orozco&nbsp;|&nbsp;Lenguaje Labs
             <span className="block text-xs font-normal text-slate-500">Based on the WIDA ELD Standards Framework</span>
-            <span className="block text-xs font-normal text-slate-400">&copy; 2026 Freddie Orozco. All rights reserved.</span>
+            <span className="block text-xs font-normal text-slate-400">&copy; 2026 Federico Orozco. All rights reserved.</span>
+            <a href="mailto:lenguajelabs@proton.me" className="block text-xs font-normal text-slate-400 hover:text-slate-600 transition-colors">lenguajelabs@proton.me</a>
           </p>
         </div>
 

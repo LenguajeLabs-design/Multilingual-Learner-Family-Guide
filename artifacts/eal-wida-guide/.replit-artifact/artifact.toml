@@ -1,6 +1,6 @@
 kind = "web"
 previewPath = "/"
-title = "Multilingual Learner Family Guide"
+title = "EAL Family Guide"
 version = "1.0.0"
 id = "artifacts/eal-wida-guide"
 router = "path"

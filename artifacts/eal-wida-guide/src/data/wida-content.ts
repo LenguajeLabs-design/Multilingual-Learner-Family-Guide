@@ -709,7 +709,7 @@ type Translations = {
 
 export const TRANSLATIONS: Translations = {
   en: {
-    appTitle: "WIDA Family Guide",
+    appTitle: "Multilingual Learner Family Guide",
     appSubtitle: "Understand your child's English proficiency level and how you can support their learning journey.",
     selectLevel: "Select your child's level:",
     levelLabel: "Level",
@@ -737,7 +737,7 @@ export const TRANSLATIONS: Translations = {
     ],
   },
   ko: {
-    appTitle: "WIDA 가족 가이드",
+    appTitle: "다국어 학습자 가족 가이드",
     appSubtitle: "자녀의 영어 능숙도 수준을 이해하고 학습 여정을 지원하는 방법을 알아보세요.",
     selectLevel: "자녀의 레벨을 선택하세요:",
     levelLabel: "레벨",
@@ -765,7 +765,7 @@ export const TRANSLATIONS: Translations = {
     ],
   },
   zh: {
-    appTitle: "WIDA 家庭指南",
+    appTitle: "多语言学习者家庭指南",
     appSubtitle: "了解您孩子的英语熟练水平以及如何支持他们的学习之旅。",
     selectLevel: "选择您孩子的水平：",
     levelLabel: "水平",
@@ -793,7 +793,7 @@ export const TRANSLATIONS: Translations = {
     ],
   },
   es: {
-    appTitle: "Guía Familiar de WIDA",
+    appTitle: "Guía Familiar para Estudiantes Multilingües",
     appSubtitle: "Comprenda el nivel de dominio del inglés de su hijo y cómo puede apoyar su aprendizaje.",
     selectLevel: "Seleccione el nivel de su hijo:",
     levelLabel: "Nivel",

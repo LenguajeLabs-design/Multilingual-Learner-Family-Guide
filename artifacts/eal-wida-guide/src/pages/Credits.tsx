@@ -10,7 +10,7 @@ export default function Credits() {
             <BookOpen className="w-5 h-5" />
           </div>
           <h1 className="font-semibold text-base hidden sm:block normal-case tracking-wide" style={{ color: "#142550" }}>
-            WIDA Family Guide
+            Multilingual Learner Family Guide
           </h1>
         </div>
         <Link
@@ -38,7 +38,7 @@ export default function Credits() {
             About &amp; Credits
           </h1>
           <p className="text-slate-500 text-sm uppercase tracking-widest font-semibold">
-            WIDA Family Guide
+            Multilingual Learner Family Guide
           </p>
         </div>
 

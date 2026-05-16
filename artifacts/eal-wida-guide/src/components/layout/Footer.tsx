@@ -15,7 +15,7 @@ export function Footer({ t }: { t: any }) {
         <div className="flex items-center gap-4">
           <img
             src="/logo-icon.svg"
-            alt="WIDA Family Guide logo"
+            alt="Multilingual Learner Family Guide logo"
             className="w-10 h-10 rounded-xl shadow-sm opacity-80 flex-shrink-0"
           />
           <div className="text-left leading-snug">

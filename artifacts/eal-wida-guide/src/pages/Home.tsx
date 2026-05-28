@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { LevelSelector } from "@/components/sections/LevelSelector";
 import { LevelDetail } from "@/components/sections/LevelDetail";
 import { ProgressSection } from "@/components/sections/ProgressSection";
-import { TeacherNote } from "@/components/sections/TeacherNote";
+
 import { getLevels, TRANSLATIONS } from "@/data/wida-content";
 import { motion } from "framer-motion";
 
@@ -71,10 +71,8 @@ export default function Home() {
           />
         </div>
 
-        {/* Progress & Teacher Note */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+        <div className="w-full">
           <ProgressSection t={t} />
-          <TeacherNote t={t} />
         </div>
       </main>
 

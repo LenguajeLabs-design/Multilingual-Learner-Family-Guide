@@ -51,12 +51,21 @@ export function Footer({ t }: { t: any }) {
           </p>
         </div>
 
-        <Link
-          href="/credits"
-          className="text-xs underline underline-offset-2 text-slate-400 hover:text-slate-600 transition-colors no-print"
-        >
-          About &amp; Credits
-        </Link>
+        <div className="flex items-center gap-4 no-print">
+          <Link
+            href="/credits"
+            className="text-xs underline underline-offset-2 text-slate-400 hover:text-slate-600 transition-colors"
+          >
+            About &amp; Credits
+          </Link>
+          <span className="text-slate-300">·</span>
+          <Link
+            href="/references"
+            className="text-xs underline underline-offset-2 text-slate-400 hover:text-slate-600 transition-colors"
+          >
+            References
+          </Link>
+        </div>
 
       </div>
     </footer>

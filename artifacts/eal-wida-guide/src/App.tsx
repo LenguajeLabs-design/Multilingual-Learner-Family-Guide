@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/Home";
 import Credits from "@/pages/Credits";
+import References from "@/pages/References";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient({
@@ -20,6 +21,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/credits" component={Credits} />
+      <Route path="/references" component={References} />
       <Route component={NotFound} />
     </Switch>
   );

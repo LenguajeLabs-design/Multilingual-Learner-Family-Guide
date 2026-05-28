@@ -159,7 +159,7 @@ const LEVEL_CONTENT_BY_LANG: Record<string, WIDALevelContent[]> = {
         "Opportunities for extended writing and critical thinking",
         "Feedback on sophisticated grammar and style in writing",
         "Advanced discussion opportunities to build academic oral language",
-        "Support transitioning off formal ELL services (monitoring, not abandonment)",
+        "Support transitioning off formal EAL services (monitoring, not abandonment)",
       ],
       homeTips: [
         "Your child may need less direct language help now, but your engagement still matters enormously",
@@ -173,7 +173,7 @@ const LEVEL_CONTENT_BY_LANG: Record<string, WIDALevelContent[]> = {
     {
       name: "Reaching",
       tagline: "A milestone — and a lifelong skill.",
-      description: "Your child has reached a level of English proficiency comparable to their English-speaking peers. At this stage, schools typically exit students from formal ELL services. However, learning never stops — your child continues to grow as a communicator, thinker, and bilingual person.",
+      description: "Your child has reached a level of English proficiency comparable to their English-speaking peers. At this stage, schools typically exit students from formal EAL services. However, learning never stops — your child continues to grow as a communicator, thinker, and bilingual person.",
       skills: {
         listening: "Fully understands all academic and social English, including complex, abstract, and specialized language.",
         speaking: "Communicates with fluency, accuracy, and sophistication across all settings.",
@@ -184,7 +184,7 @@ const LEVEL_CONTENT_BY_LANG: Record<string, WIDALevelContent[]> = {
         "Continued affirmation of bilingualism as an academic and personal asset",
         "Access to advanced coursework (do not place ceilings on achievement)",
         "Home language literacy support if desired (it strengthens English too)",
-        "Monitoring in the year or two following exit from ELL services",
+        "Monitoring in the year or two following exit from EAL services",
       ],
       homeTips: [
         "Celebrate this milestone — it is a genuine achievement",
@@ -318,7 +318,7 @@ const LEVEL_CONTENT_BY_LANG: Record<string, WIDALevelContent[]> = {
         "심화 글쓰기와 비판적 사고 기회",
         "글쓰기에서 정교한 문법과 문체에 대한 피드백",
         "학문적 구어 언어를 키우는 고급 토론 기회",
-        "공식적인 ELL 서비스 종료 전환 지원 (지속적인 모니터링)",
+        "공식적인 EAL 서비스 종료 전환 지원 (지속적인 모니터링)",
       ],
       homeTips: [
         "자녀가 이제 직접적인 언어 도움이 덜 필요할 수 있지만, 부모님의 참여는 여전히 매우 중요합니다",
@@ -332,7 +332,7 @@ const LEVEL_CONTENT_BY_LANG: Record<string, WIDALevelContent[]> = {
     {
       name: "달성",
       tagline: "하나의 이정표 — 그리고 평생의 능력.",
-      description: "자녀가 영어를 모국어로 하는 또래 학생들과 비교할 수 있는 수준의 영어 능숙도에 도달했습니다. 이 단계에서 학교는 보통 학생을 공식 ELL 서비스에서 졸업시킵니다. 하지만 배움은 멈추지 않습니다 — 자녀는 소통자, 사상가, 이중 언어 사용자로서 계속 성장합니다.",
+      description: "자녀가 영어를 모국어로 하는 또래 학생들과 비교할 수 있는 수준의 영어 능숙도에 도달했습니다. 이 단계에서 학교는 보통 학생을 공식 EAL 서비스에서 졸업시킵니다. 하지만 배움은 멈추지 않습니다 — 자녀는 소통자, 사상가, 이중 언어 사용자로서 계속 성장합니다.",
       skills: {
         listening: "복잡하고 추상적이며 전문화된 언어를 포함한 모든 학문적, 사회적 영어를 완전히 이해합니다.",
         speaking: "모든 상황에서 유창하고 정확하며 세련되게 소통합니다.",
@@ -343,7 +343,7 @@ const LEVEL_CONTENT_BY_LANG: Record<string, WIDALevelContent[]> = {
         "이중 언어 능력을 학문적, 개인적 자산으로 지속적으로 인정",
         "고급 교과 과정 접근 (성취에 상한선을 두지 않기)",
         "원하는 경우 모국어 문해력 지원 (영어도 강화됨)",
-        "ELL 서비스 종료 후 1~2년간의 모니터링",
+        "EAL 서비스 종료 후 1~2년간의 모니터링",
       ],
       homeTips: [
         "이 이정표를 축하하세요 — 진정한 성취입니다",
@@ -636,7 +636,7 @@ const LEVEL_CONTENT_BY_LANG: Record<string, WIDALevelContent[]> = {
         "Oportunidades de escritura extendida y pensamiento crítico",
         "Retroalimentación sobre gramática y estilo sofisticados en escritura",
         "Oportunidades de discusión avanzada para desarrollar el lenguaje oral académico",
-        "Apoyo en la transición fuera de los servicios formales de ELL (seguimiento, no abandono)",
+        "Apoyo en la transición fuera de los servicios formales de EAL (seguimiento, no abandono)",
       ],
       homeTips: [
         "Su hijo puede necesitar menos ayuda directa con el idioma ahora, pero su participación sigue siendo enormemente importante",
@@ -650,7 +650,7 @@ const LEVEL_CONTENT_BY_LANG: Record<string, WIDALevelContent[]> = {
     {
       name: "Alcanzando",
       tagline: "Un hito — y una habilidad para toda la vida.",
-      description: "Su hijo ha alcanzado un nivel de dominio del inglés comparable al de sus compañeros de habla inglesa. En esta etapa, las escuelas generalmente dan de baja a los estudiantes de los servicios formales de ELL. Sin embargo, el aprendizaje nunca se detiene — su hijo continúa creciendo como comunicador, pensador y persona bilingüe.",
+      description: "Su hijo ha alcanzado un nivel de dominio del inglés comparable al de sus compañeros de habla inglesa. En esta etapa, las escuelas generalmente dan de baja a los estudiantes de los servicios formales de EAL. Sin embargo, el aprendizaje nunca se detiene — su hijo continúa creciendo como comunicador, pensador y persona bilingüe.",
       skills: {
         listening: "Comprende completamente todo el inglés académico y social, incluyendo lenguaje complejo, abstracto y especializado.",
         speaking: "Se comunica con fluidez, precisión y sofisticación en todos los entornos.",

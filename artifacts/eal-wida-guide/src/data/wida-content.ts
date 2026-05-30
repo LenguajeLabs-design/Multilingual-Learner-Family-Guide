@@ -857,19 +857,22 @@ type Translations = {
     teacherNotePlaceholder: string;
     printButton: string;
     disclaimer: string;
+    independentDisclaimer: string;
     encouragementLabel: string;
     exitLevelSubtitle: string;
     exitLevelBadge: string;
     continuumNote: string;
     schoolPolicyTitle: string;
     schoolPolicyBullets: string[];
+    startHereTitle: string;
+    startHereSections: { title: string; text: string }[];
   };
 };
 
 export const TRANSLATIONS: Translations = {
   en: {
     appTitle: "Multilingual Learner Family Guide",
-    appSubtitle: "Understand your child's English proficiency level and how you can support their learning journey.",
+    appSubtitle: "Learn what your child's English level means and discover practical ways to support language growth at home and at school.",
     selectLevel: "Select your child's level:",
     levelLabel: "Level",
     listeningLabel: "Listening",
@@ -884,6 +887,7 @@ export const TRANSLATIONS: Translations = {
     teacherNotePlaceholder: "Teachers: Add a personal note for this family before printing.",
     printButton: "Print Summary",
     disclaimer: "This tool provides general guidance and does not replace school-based assessment or teacher judgment.",
+    independentDisclaimer: "This independent resource was created by Freddie Orozco to help families better understand multilingual learner development. It is not affiliated with or endorsed by WIDA.",
     encouragementLabel: "A note of encouragement",
     exitLevelSubtitle: "Typical EAL Exit Level at Our School",
     exitLevelBadge: "Exit Level",
@@ -894,10 +898,29 @@ export const TRANSLATIONS: Translations = {
       "Exit decisions consider classroom performance, language use, and teacher input — not WIDA score alone.",
       "Language continues to develop after program exit. Teachers monitor student progress.",
     ],
+    startHereTitle: "New here? Start here.",
+    startHereSections: [
+      {
+        title: "What is WIDA?",
+        text: "WIDA is a language development framework used by many schools to understand and support multilingual learners as they develop English in listening, speaking, reading, and writing.",
+      },
+      {
+        title: "Why is my child in EAL?",
+        text: "Your child receives EAL support because they are developing academic English while also learning grade-level content. EAL support helps students access classroom learning while building language skills over time.",
+      },
+      {
+        title: "A WIDA score is not a grade",
+        text: "WIDA scores do not measure intelligence, effort, or potential. They show a student's current stage of academic English development. Language growth takes time, and students progress at different rates.",
+      },
+      {
+        title: "How do I use this guide?",
+        text: "Find your child's current WIDA level and select the matching number. You will see what students can typically do at that level, along with ways families and schools can support continued language growth.",
+      },
+    ],
   },
   ko: {
     appTitle: "다국어 학습자 가족 가이드",
-    appSubtitle: "자녀의 영어 능숙도 수준을 이해하고 학습 여정을 지원하는 방법을 알아보세요.",
+    appSubtitle: "자녀의 영어 수준이 무엇을 의미하는지 이해하고, 가정과 학교에서 언어 성장을 지원할 수 있는 실질적인 방법을 알아보세요.",
     selectLevel: "자녀의 레벨을 선택하세요:",
     levelLabel: "레벨",
     listeningLabel: "듣기",
@@ -912,6 +935,7 @@ export const TRANSLATIONS: Translations = {
     teacherNotePlaceholder: "교사: 인쇄하기 전에 가족을 위한 개인 메시지를 추가하세요.",
     printButton: "요약 인쇄",
     disclaimer: "이 도구는 일반적인 지침을 제공하며 학교 평가나 교사의 판단을 대체하지 않습니다.",
+    independentDisclaimer: "이 독립적인 자료는 다국어 학습자 발달을 가족들이 더 잘 이해할 수 있도록 돕기 위해 Freddie Orozco가 만들었습니다. WIDA와 제휴되거나 보증되지 않습니다.",
     encouragementLabel: "격려의 말",
     exitLevelSubtitle: "저희 학교의 일반적인 EAL 졸업 레벨",
     exitLevelBadge: "졸업 레벨",
@@ -922,10 +946,29 @@ export const TRANSLATIONS: Translations = {
       "졸업 결정은 WIDA 점수만이 아니라 수업 성취도, 언어 사용 능력, 교사 의견을 종합적으로 고려합니다.",
       "언어 발달은 프로그램 졸업 후에도 계속됩니다. 교사들이 학생의 진도를 모니터링합니다.",
     ],
+    startHereTitle: "처음 오셨나요? 여기서 시작하세요.",
+    startHereSections: [
+      {
+        title: "WIDA란 무엇인가요?",
+        text: "WIDA는 많은 학교에서 다국어 학습자들이 듣기, 말하기, 읽기, 쓰기 영역에서 영어를 발달시키는 과정을 이해하고 지원하기 위해 사용하는 언어 발달 프레임워크입니다.",
+      },
+      {
+        title: "제 자녀가 왜 EAL을 받나요?",
+        text: "자녀는 학년 수준의 교과 내용을 배우면서 동시에 학문적 영어를 발달시키고 있기 때문에 EAL 지원을 받습니다. EAL 지원은 학생들이 시간이 지남에 따라 언어 능력을 키우면서 교실 학습에 접근할 수 있도록 도와줍니다.",
+      },
+      {
+        title: "WIDA 점수는 성적이 아닙니다",
+        text: "WIDA 점수는 지능, 노력 또는 잠재력을 측정하지 않습니다. 이 점수는 학생의 현재 학문적 영어 발달 단계를 보여줍니다. 언어 성장에는 시간이 필요하며, 학생마다 다른 속도로 진전합니다.",
+      },
+      {
+        title: "이 가이드를 어떻게 사용하나요?",
+        text: "자녀의 현재 WIDA 레벨을 찾아 해당 번호를 선택하세요. 해당 레벨에서 학생들이 일반적으로 할 수 있는 것과, 가족과 학교가 지속적인 언어 성장을 지원할 수 있는 방법을 확인하실 수 있습니다.",
+      },
+    ],
   },
   zh: {
     appTitle: "多语言学习者家庭指南",
-    appSubtitle: "了解您孩子的英语熟练水平以及如何支持他们的学习之旅。",
+    appSubtitle: "了解您孩子的英语水平意味着什么，并发现在家和在学校支持语言成长的实用方法。",
     selectLevel: "选择您孩子的水平：",
     levelLabel: "水平",
     listeningLabel: "听力",
@@ -940,6 +983,7 @@ export const TRANSLATIONS: Translations = {
     teacherNotePlaceholder: "老师：请在打印前为该家庭添加个人留言。",
     printButton: "打印摘要",
     disclaimer: "此工具提供一般指导，不能替代学校的评估或老师的判断。",
+    independentDisclaimer: "这份独立资源由 Freddie Orozco 创建，旨在帮助家庭更好地了解多语言学习者的发展。它与WIDA没有关联，也未获得WIDA的认可。",
     encouragementLabel: "鼓励的话",
     exitLevelSubtitle: "我们学校的典型EAL退出级别",
     exitLevelBadge: "退出级别",
@@ -950,10 +994,29 @@ export const TRANSLATIONS: Translations = {
       "退出决定综合考虑课堂表现、语言使用情况和教师意见，而不仅仅是WIDA分数。",
       "退出项目后语言仍在持续发展。教师会监测学生的进步情况。",
     ],
+    startHereTitle: "第一次来？从这里开始。",
+    startHereSections: [
+      {
+        title: "什么是WIDA？",
+        text: "WIDA是许多学校用来了解和支持多语言学习者在听、说、读、写方面发展英语的语言发展框架。",
+      },
+      {
+        title: "我的孩子为什么接受EAL支持？",
+        text: "您的孩子接受EAL支持，是因为他们在学习年级水平课程内容的同时，也在发展学术英语。EAL支持帮助学生在逐渐培养语言技能的过程中融入课堂学习。",
+      },
+      {
+        title: "WIDA分数不是成绩",
+        text: "WIDA分数不衡量智力、努力程度或潜力。它们显示学生目前学术英语发展的阶段。语言成长需要时间，学生的进步速度各有不同。",
+      },
+      {
+        title: "如何使用本指南？",
+        text: "找到您孩子当前的WIDA水平并选择对应的数字。您将看到该水平的学生通常能做什么，以及家庭和学校如何支持持续的语言成长。",
+      },
+    ],
   },
   es: {
     appTitle: "Guía Familiar para Estudiantes Multilingües",
-    appSubtitle: "Comprenda el nivel de dominio del inglés de su hijo y cómo puede apoyar su aprendizaje.",
+    appSubtitle: "Conozca qué significa el nivel de inglés de su hijo y descubra maneras prácticas de apoyar el crecimiento del idioma en casa y en la escuela.",
     selectLevel: "Seleccione el nivel de su hijo:",
     levelLabel: "Nivel",
     listeningLabel: "Escuchar",
@@ -968,6 +1031,7 @@ export const TRANSLATIONS: Translations = {
     teacherNotePlaceholder: "Maestros: Agreguen una nota personal para esta familia antes de imprimir.",
     printButton: "Imprimir resumen",
     disclaimer: "Esta herramienta proporciona orientación general y no reemplaza la evaluación escolar ni el juicio del maestro.",
+    independentDisclaimer: "Este recurso independiente fue creado por Freddie Orozco para ayudar a las familias a comprender mejor el desarrollo de los estudiantes multilingües. No está afiliado ni respaldado por WIDA.",
     encouragementLabel: "Una nota de ánimo",
     exitLevelSubtitle: "Nivel típico de salida EAL en nuestra escuela",
     exitLevelBadge: "Nivel de salida",
@@ -978,10 +1042,29 @@ export const TRANSLATIONS: Translations = {
       "Las decisiones de salida consideran el rendimiento en el aula, el uso del idioma y la opinión del maestro, no solo la puntuación WIDA.",
       "El idioma continúa desarrollándose después de salir del programa. Los maestros monitorean el progreso del estudiante.",
     ],
+    startHereTitle: "¿Es la primera vez? Empiece aquí.",
+    startHereSections: [
+      {
+        title: "¿Qué es WIDA?",
+        text: "WIDA es un marco de desarrollo del lenguaje utilizado por muchas escuelas para comprender y apoyar a los estudiantes multilingües mientras desarrollan el inglés en escucha, habla, lectura y escritura.",
+      },
+      {
+        title: "¿Por qué mi hijo está en EAL?",
+        text: "Su hijo recibe apoyo EAL porque está desarrollando el inglés académico mientras también aprende el contenido del nivel de grado. El apoyo EAL ayuda a los estudiantes a acceder al aprendizaje en el aula mientras construyen habilidades lingüísticas con el tiempo.",
+      },
+      {
+        title: "Una puntuación WIDA no es una calificación",
+        text: "Las puntuaciones WIDA no miden inteligencia, esfuerzo o potencial. Muestran la etapa actual de desarrollo del inglés académico del estudiante. El crecimiento del idioma lleva tiempo, y los estudiantes progresan a diferentes ritmos.",
+      },
+      {
+        title: "¿Cómo uso esta guía?",
+        text: "Encuentre el nivel WIDA actual de su hijo y seleccione el número correspondiente. Verá lo que los estudiantes típicamente pueden hacer en ese nivel, junto con formas en que las familias y las escuelas pueden apoyar el crecimiento continuo del idioma.",
+      },
+    ],
   },
   fr: {
     appTitle: "Guide Familial pour Apprenants Multilingues",
-    appSubtitle: "Comprenez le niveau de maîtrise de l'anglais de votre enfant et comment soutenir son parcours d'apprentissage.",
+    appSubtitle: "Découvrez ce que signifie le niveau d'anglais de votre enfant et trouvez des façons concrètes de soutenir la croissance linguistique à la maison et à l'école.",
     selectLevel: "Sélectionnez le niveau de votre enfant :",
     levelLabel: "Niveau",
     listeningLabel: "Écoute",
@@ -996,6 +1079,7 @@ export const TRANSLATIONS: Translations = {
     teacherNotePlaceholder: "Enseignants : Ajoutez une note personnelle pour cette famille avant d'imprimer.",
     printButton: "Imprimer le résumé",
     disclaimer: "Cet outil fournit des orientations générales et ne remplace pas l'évaluation scolaire ni le jugement de l'enseignant.",
+    independentDisclaimer: "Cette ressource indépendante a été créée par Freddie Orozco pour aider les familles à mieux comprendre le développement des apprenants multilingues. Elle n'est pas affiliée à WIDA et n'est pas approuvée par WIDA.",
     encouragementLabel: "Un mot d'encouragement",
     exitLevelSubtitle: "Niveau de sortie EAL typique dans notre école",
     exitLevelBadge: "Niveau de sortie",
@@ -1005,6 +1089,25 @@ export const TRANSLATIONS: Translations = {
       "Les élèves sortent généralement du programme EAL aux alentours du niveau WIDA 4.0.",
       "Les décisions de sortie tiennent compte des résultats en classe, de l'utilisation de la langue et de l'avis des enseignants — pas seulement du score WIDA.",
       "La langue continue à se développer après la sortie du programme. Les enseignants suivent les progrès des élèves.",
+    ],
+    startHereTitle: "Vous êtes nouveau ici ? Commencez ici.",
+    startHereSections: [
+      {
+        title: "Qu'est-ce que WIDA ?",
+        text: "WIDA est un cadre de développement du langage utilisé par de nombreuses écoles pour comprendre et soutenir les apprenants multilingues dans leur développement de l'anglais à l'écoute, à l'expression orale, à la lecture et à l'écrit.",
+      },
+      {
+        title: "Pourquoi mon enfant est-il en EAL ?",
+        text: "Votre enfant bénéficie du soutien EAL parce qu'il développe l'anglais académique tout en apprenant le contenu du niveau scolaire. Le soutien EAL aide les élèves à accéder à l'apprentissage en classe tout en développant leurs compétences linguistiques au fil du temps.",
+      },
+      {
+        title: "Un score WIDA n'est pas une note",
+        text: "Les scores WIDA ne mesurent pas l'intelligence, l'effort ou le potentiel. Ils montrent l'étape actuelle du développement de l'anglais académique d'un élève. La croissance linguistique prend du temps, et les élèves progressent à des rythmes différents.",
+      },
+      {
+        title: "Comment utiliser ce guide ?",
+        text: "Trouvez le niveau WIDA actuel de votre enfant et sélectionnez le numéro correspondant. Vous verrez ce que les élèves peuvent généralement faire à ce niveau, ainsi que les façons dont les familles et les écoles peuvent soutenir la croissance linguistique continue.",
+      },
     ],
   },
 };

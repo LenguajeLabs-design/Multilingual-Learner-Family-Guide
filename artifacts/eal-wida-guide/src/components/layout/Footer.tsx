@@ -47,7 +47,7 @@ export function Footer({ t }: { t: any }) {
             </a>
           </p>
           <p className="text-xs text-slate-400 italic">
-            This tool is not affiliated with, reviewed by, sponsored by, or endorsed by WIDA.
+            {t.independentDisclaimer}
           </p>
         </div>
 

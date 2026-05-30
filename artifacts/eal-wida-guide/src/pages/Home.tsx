@@ -6,6 +6,7 @@ import { LevelDetail } from "@/components/sections/LevelDetail";
 import { ProgressSection } from "@/components/sections/ProgressSection";
 
 import { getLevels, TRANSLATIONS } from "@/data/wida-content";
+import { StartHereAccordion } from "@/components/sections/StartHereAccordion";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -51,6 +52,11 @@ export default function Home() {
           >
             {t.appSubtitle}
           </motion.p>
+        </section>
+
+        {/* Start Here Accordion */}
+        <section className="no-print w-full max-w-2xl mx-auto -mt-6">
+          <StartHereAccordion t={t} />
         </section>
 
         {/* Level Selector */}

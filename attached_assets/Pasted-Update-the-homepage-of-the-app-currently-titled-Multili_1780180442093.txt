@@ -1,0 +1,44 @@
+Update the homepage of the app currently titled “Multilingual Learner Family Guide.”
+
+Keep the current title and visual style. Do not rename the app to WIDA Family Guide. WIDA should be explained as the framework, but the focus of the app should remain on multilingual learners and families.
+
+Add a new collapsed accordion section directly under the subtitle and above “Select your child’s level.”
+
+Accordion title:
+“New here? Start here.”
+
+Inside the accordion, add four short sections:
+
+1. What is WIDA?
+Text:
+“WIDA is a language development framework used by many schools to understand and support multilingual learners as they develop English in listening, speaking, reading, and writing.”
+
+2. Why is my child in EAL?
+Text:
+“Your child receives EAL support because they are developing academic English while also learning grade-level content. EAL support helps students access classroom learning while building language skills over time.”
+
+3. A WIDA score is not a grade
+Text:
+“WIDA scores do not measure intelligence, effort, or potential. They show a student’s current stage of academic English development. Language growth takes time, and students progress at different rates.”
+
+4. How do I use this guide?
+Text:
+“Find your child’s current WIDA level and select the matching number. You will see what students can typically do at that level, along with ways families and schools can support continued language growth.”
+
+Also update the homepage subtitle from:
+“Understand your child's English proficiency level and how you can support their learning journey.”
+
+To:
+“Learn what your child’s English level means and discover practical ways to support language growth at home and at school.”
+
+Add a small footer disclaimer at the bottom of the app:
+
+“This independent resource was created by Federico Orozco to help families better understand multilingual learner development. It is not affiliated with or endorsed by WIDA.”
+
+Make sure:
+- The accordion is collapsed by default.
+- The design matches the existing app style.
+- It works well on mobile.
+- All new text is included in the translation system.
+- Do not break the existing level buttons, language selector, or print button.
+- Keep the language simple, positive, and family-friendly.

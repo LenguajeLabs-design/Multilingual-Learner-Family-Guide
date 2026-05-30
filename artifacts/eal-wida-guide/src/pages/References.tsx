@@ -160,7 +160,7 @@ export default function References() {
 
       <footer className="bg-slate-100 py-6 px-4 border-t border-slate-200 text-center text-sm text-slate-500">
         <p className="font-semibold text-slate-700">
-          Created by Freddie Orozco &nbsp;|&nbsp; &copy; 2026 Freddie Orozco. All rights reserved.
+          Created by Federico Orozco &nbsp;|&nbsp; &copy; 2026 Federico Orozco. All rights reserved.
         </p>
       </footer>
     </div>

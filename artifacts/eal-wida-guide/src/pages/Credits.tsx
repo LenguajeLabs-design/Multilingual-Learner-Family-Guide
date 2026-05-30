@@ -46,7 +46,7 @@ export default function Credits() {
           <div className="border-l-4 pl-6 py-1" style={{ borderColor: "#C82C39" }}>
             <p className="text-lg sm:text-xl leading-relaxed text-slate-700">
               This tool was designed and created by{" "}
-              <span className="font-bold" style={{ color: "#142550" }}>Freddie Orozco</span>{" "}
+              <span className="font-bold" style={{ color: "#142550" }}>Federico Orozco</span>{" "}
               to support multilingual learners, families, and educators.
             </p>
           </div>
@@ -62,8 +62,8 @@ export default function Credits() {
             >
               Creator
             </h2>
-            <p className="font-bold text-lg" style={{ color: "#142550" }}>Freddie Orozco</p>
-            <p className="text-slate-500 text-sm mt-1">&copy; 2026 Freddie Orozco. All rights reserved.</p>
+            <p className="font-bold text-lg" style={{ color: "#142550" }}>Federico Orozco</p>
+            <p className="text-slate-500 text-sm mt-1">&copy; 2026 Federico Orozco. All rights reserved.</p>
           </div>
 
           <div className="rounded-2xl p-6 border border-slate-100 bg-slate-50">
@@ -76,7 +76,7 @@ export default function Credits() {
             <ul className="space-y-3 text-slate-600 text-sm leading-relaxed">
               <li className="flex items-start gap-3">
                 <span className="mt-0.5 font-bold" style={{ color: "#C82C39" }}>•</span>
-                <span>Educational use of this live app is welcome, provided proper credit is given to Freddie Orozco.</span>
+                <span>Educational use of this live app is welcome, provided proper credit is given to Federico Orozco.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-0.5 font-bold" style={{ color: "#C82C39" }}>•</span>
@@ -93,7 +93,7 @@ export default function Credits() {
 
       <footer className="bg-slate-100 py-6 px-4 border-t border-slate-200 text-center text-sm text-slate-500">
         <p className="font-semibold text-slate-700">
-          Created by Freddie Orozco &nbsp;|&nbsp; &copy; 2026 Freddie Orozco. All rights reserved.
+          Created by Federico Orozco &nbsp;|&nbsp; &copy; 2026 Federico Orozco. All rights reserved.
         </p>
       </footer>
     </div>

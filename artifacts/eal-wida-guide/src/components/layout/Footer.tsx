@@ -19,7 +19,7 @@ export function Footer({ t }: { t: any }) {
             className="w-10 h-10 rounded-xl shadow-sm opacity-80 flex-shrink-0"
           />
           <div className="text-left leading-snug">
-            <p className="font-semibold text-slate-700">Created by Freddie Orozco</p>
+            <p className="font-semibold text-slate-700">Created by Federico Orozco</p>
             <p className="text-xs text-slate-500">EAL Educator | AI &amp; Multilingual Learning Innovation</p>
             <a
               href="mailto:LenguajeLabs@proton.me"

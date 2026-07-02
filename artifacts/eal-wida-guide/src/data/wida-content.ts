@@ -22,6 +22,7 @@ export type WIDALevelStyle = {
   accent: string;
   border: string;
   badge: string;
+  icon: string;
   isExitLevel?: boolean;
   isContinuum?: boolean;
 };
@@ -29,12 +30,12 @@ export type WIDALevelStyle = {
 export type WIDALevel = WIDALevelStyle & WIDALevelContent;
 
 const WIDA_STYLES: WIDALevelStyle[] = [
-  { id: 1, color: "bg-[#EEF0F7]", accent: "text-[#142550]", border: "border-[#C4CCE0]", badge: "bg-[#142550]" },
-  { id: 2, color: "bg-[#FCE8EA]", accent: "text-[#C82C39]", border: "border-[#F0BCBF]", badge: "bg-[#C82C39]" },
-  { id: 3, color: "bg-[#E1E5F3]", accent: "text-[#142550]", border: "border-[#B4BDD8]", badge: "bg-[#142550]" },
-  { id: 4, color: "bg-[#FAE0E2]", accent: "text-[#C82C39]", border: "border-[#EDB0B4]", badge: "bg-[#C82C39]", isExitLevel: true },
-  { id: 5, color: "bg-[#D4DBF0]", accent: "text-[#142550]", border: "border-[#A5B0D3]", badge: "bg-[#142550]", isContinuum: true },
-  { id: 6, color: "bg-[#F7D5D8]", accent: "text-[#C82C39]", border: "border-[#E8A5AA]", badge: "bg-[#142550]", isContinuum: true },
+  { id: 1, color: "bg-[#EEF0F7]", accent: "text-[#142550]", border: "border-[#C4CCE0]", badge: "bg-[#142550]", icon: "Sprout" },
+  { id: 2, color: "bg-[#FCE8EA]", accent: "text-[#C82C39]", border: "border-[#F0BCBF]", badge: "bg-[#C82C39]", icon: "Footprints" },
+  { id: 3, color: "bg-[#E1E5F3]", accent: "text-[#142550]", border: "border-[#B4BDD8]", badge: "bg-[#142550]", icon: "MessageCircle" },
+  { id: 4, color: "bg-[#FAE0E2]", accent: "text-[#C82C39]", border: "border-[#EDB0B4]", badge: "bg-[#C82C39]", icon: "TrendingUp", isExitLevel: true },
+  { id: 5, color: "bg-[#D4DBF0]", accent: "text-[#142550]", border: "border-[#A5B0D3]", badge: "bg-[#142550]", icon: "Milestone", isContinuum: true },
+  { id: 6, color: "bg-[#F7D5D8]", accent: "text-[#C82C39]", border: "border-[#E8A5AA]", badge: "bg-[#142550]", icon: "Trophy", isContinuum: true },
 ];
 
 const LEVEL_CONTENT_BY_LANG: Record<string, WIDALevelContent[]> = {

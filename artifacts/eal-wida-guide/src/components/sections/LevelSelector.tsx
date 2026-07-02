@@ -1,12 +1,23 @@
 import { WIDALevel } from "@/data/wida-content";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { Sprout, Footprints, MessageCircle, TrendingUp, Milestone, Trophy, type LucideIcon } from "lucide-react";
+
+const LEVEL_ICONS: Record<string, LucideIcon> = {
+  Sprout,
+  Footprints,
+  MessageCircle,
+  TrendingUp,
+  Milestone,
+  Trophy,
+};
 
 export function LevelSelector({ levels, selectedId, onSelect }: { levels: WIDALevel[], selectedId: number, onSelect: (id: 1|2|3|4|5|6) => void }) {
   return (
     <div className="grid grid-cols-3 md:grid-cols-6 gap-2 sm:gap-3">
       {levels.map((level) => {
         const isSelected = level.id === selectedId;
+        const Icon = LEVEL_ICONS[level.icon] ?? Sprout;
         return (
           <button
             key={level.id}
@@ -21,6 +32,7 @@ export function LevelSelector({ levels, selectedId, onSelect }: { levels: WIDALe
               transform: isSelected ? 'translateY(-2px)' : 'translateY(0)'
             }}
           >
+            <Icon className={cn("w-4 h-4 sm:w-5 sm:h-5", isSelected ? level.accent : "text-slate-300")} strokeWidth={1.75} />
             <span className={cn(
               "text-xl sm:text-2xl font-bold rounded-full w-8 h-8 flex items-center justify-center",
               isSelected ? `${level.badge} text-white` : "text-slate-400 bg-slate-100"

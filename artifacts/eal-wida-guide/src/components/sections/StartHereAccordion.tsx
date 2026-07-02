@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, HelpCircle, Users, Scale, BookOpenCheck } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+
+const SECTION_ICONS = [HelpCircle, Users, Scale, BookOpenCheck];
 
 export function StartHereAccordion({ t }: { t: any }) {
   const [open, setOpen] = useState(false);
@@ -34,15 +36,24 @@ export function StartHereAccordion({ t }: { t: any }) {
           >
             <div className="pt-3 space-y-2">
               {t.startHereSections.map(
-                (section: { title: string; text: string }, i: number) => (
+                (section: { title: string; text: string }, i: number) => {
+                  const SectionIcon = SECTION_ICONS[i % SECTION_ICONS.length];
+                  return (
                   <div key={i} className="bg-white border border-slate-200 rounded-2xl overflow-hidden">
                     <button
                       onClick={() => setOpenIndex(openIndex === i ? null : i)}
                       className="w-full flex items-center justify-between gap-3 px-5 py-3.5 text-left"
                       aria-expanded={openIndex === i}
                     >
-                      <span className="font-semibold text-sm" style={{ color: "#142550" }}>
-                        {section.title}
+                      <span className="flex items-center gap-3">
+                        <SectionIcon
+                          className="flex-shrink-0 w-4 h-4"
+                          style={{ color: "#C82C39" }}
+                          strokeWidth={1.75}
+                        />
+                        <span className="font-semibold text-sm" style={{ color: "#142550" }}>
+                          {section.title}
+                        </span>
                       </span>
                       <ChevronDown
                         className="flex-shrink-0 w-4 h-4 transition-transform duration-200"
@@ -77,7 +88,8 @@ export function StartHereAccordion({ t }: { t: any }) {
                       )}
                     </AnimatePresence>
                   </div>
-                )
+                  );
+                }
               )}
             </div>
           </motion.div>

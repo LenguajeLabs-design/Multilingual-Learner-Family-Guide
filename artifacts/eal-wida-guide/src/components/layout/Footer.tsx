@@ -22,10 +22,10 @@ export function Footer({ t }: { t: any }) {
             <p className="font-semibold text-slate-700">Created by Federico Orozco</p>
             <p className="text-xs text-slate-500">EAL Educator | AI &amp; Multilingual Learning Innovation</p>
             <a
-              href="mailto:LenguajeLabs@proton.me"
+              href="mailto:forozc1@gmail.com"
               className="text-xs text-slate-400 hover:text-slate-600 transition-colors"
             >
-              LenguajeLabs@proton.me
+              forozc1@gmail.com
             </a>
           </div>
         </div>

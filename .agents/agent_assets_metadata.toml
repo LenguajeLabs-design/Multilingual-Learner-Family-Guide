@@ -12,3 +12,9 @@ id = "orOCj0gjbnu80RuMgPzCi"
 uri = "file://artifacts/eal-wida-guide/public/logo-full.svg"
 type = "image"
 title = "WIDA Family Guide — Full Horizontal Logo"
+
+[[outputs]]
+id = "-GQ3SrNpU30zHjwvDfjSH"
+uri = "file://downloads/eal-wida-guide.tar.gz"
+type = "unspecified"
+title = "EAL Family Guide - Source Files"

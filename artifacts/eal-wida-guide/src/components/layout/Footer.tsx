@@ -1,6 +1,8 @@
 import { Link } from "wouter";
 
 export function Footer({ t }: { t: any }) {
+  const logoSrc = `${import.meta.env.BASE_URL}logo-icon.svg`;
+
   return (
     <footer className="bg-slate-100 py-10 px-4 mt-auto border-t border-slate-200 text-sm text-slate-500 print-only:mt-8 print-only:bg-white print-only:border-t-0">
       <div className="max-w-4xl mx-auto flex flex-col items-center gap-6">
@@ -14,7 +16,7 @@ export function Footer({ t }: { t: any }) {
         {/* Creator block */}
         <div className="flex items-center gap-4">
           <img
-            src="/logo-icon.svg"
+            src={logoSrc}
             alt="Multilingual Learner Family Guide logo"
             className="w-10 h-10 rounded-xl shadow-sm opacity-80 flex-shrink-0"
           />

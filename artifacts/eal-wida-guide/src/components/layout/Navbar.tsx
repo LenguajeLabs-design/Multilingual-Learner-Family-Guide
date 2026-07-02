@@ -1,6 +1,19 @@
 import { BookOpen, Printer } from "lucide-react";
+import { TRANSLATIONS } from "@/data/wida-content";
 
-export function Navbar({ lang, setLang, onPrint, t }: { lang: string, setLang: (l: string) => void, onPrint: () => void, t: any }) {
+type NavbarProps = {
+  lang?: string;
+  setLang?: (l: string) => void;
+  onPrint?: () => void;
+  t?: typeof TRANSLATIONS.en;
+};
+
+export function Navbar({
+  lang = "en",
+  setLang = () => {},
+  onPrint = () => {},
+  t = TRANSLATIONS.en,
+}: NavbarProps) {
   return (
     <header className="w-full bg-white/80 backdrop-blur-md border-b border-slate-200 px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between no-print sticky top-0 z-50 shadow-sm transition-all">
       <div className="flex items-center gap-3">

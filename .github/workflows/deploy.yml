@@ -20,7 +20,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      BASE_PATH: /Multilingual-Learner-Family-Guide/
+      BASE_PATH: /
     steps:
       - name: Check out repository
         uses: actions/checkout@v4

@@ -1004,6 +1004,8 @@ type Translations = {
     appTitle: string;
     appSubtitle: string;
     selectLevel: string;
+    selectLevelHelp: string;
+    selectLevelEmpty: string;
     levelLabel: string;
     listeningLabel: string;
     speakingLabel: string;
@@ -1033,7 +1035,9 @@ export const TRANSLATIONS: Translations = {
   en: {
     appTitle: "Multilingual Learner Family Guide",
     appSubtitle: "Learn what your child's English level means and discover practical ways to support language growth at home and at school.",
-    selectLevel: "Select your child's level:",
+    selectLevel: "Choose your child's WIDA level",
+    selectLevelHelp: "Use the level shown on your child's latest WIDA or ACCESS report.",
+    selectLevelEmpty: "Choose a level above to see what it means and how you can help.",
     levelLabel: "Level",
     listeningLabel: "Listening",
     speakingLabel: "Speaking",
@@ -1058,7 +1062,7 @@ export const TRANSLATIONS: Translations = {
       "Exit decisions consider classroom performance, language use, and teacher input — not WIDA score alone.",
       "Language continues to develop after program exit. Teachers monitor student progress.",
     ],
-    startHereTitle: "New here? Start here.",
+    startHereTitle: "How WIDA levels work",
     startHereSections: [
       {
         title: "What is WIDA?",
@@ -1081,7 +1085,9 @@ export const TRANSLATIONS: Translations = {
   ko: {
     appTitle: "다국어 학습자 가족 가이드",
     appSubtitle: "자녀의 영어 수준이 무엇을 의미하는지 이해하고, 가정과 학교에서 언어 성장을 지원할 수 있는 실질적인 방법을 알아보세요.",
-    selectLevel: "자녀의 레벨을 선택하세요:",
+    selectLevel: "자녀의 WIDA 레벨을 선택하세요",
+    selectLevelHelp: "자녀의 최근 WIDA 또는 ACCESS 보고서에 표시된 레벨을 사용하세요.",
+    selectLevelEmpty: "위에서 레벨을 선택하면 그 의미와 자녀를 도울 방법을 확인할 수 있습니다.",
     levelLabel: "레벨",
     listeningLabel: "듣기",
     speakingLabel: "말하기",
@@ -1106,7 +1112,7 @@ export const TRANSLATIONS: Translations = {
       "졸업 결정은 WIDA 점수만이 아니라 수업 성취도, 언어 사용 능력, 교사 의견을 종합적으로 고려합니다.",
       "언어 발달은 프로그램 졸업 후에도 계속됩니다. 교사들이 학생의 진도를 모니터링합니다.",
     ],
-    startHereTitle: "처음 오셨나요? 여기서 시작하세요.",
+    startHereTitle: "WIDA 레벨 이해하기",
     startHereSections: [
       {
         title: "WIDA란 무엇인가요?",
@@ -1129,7 +1135,9 @@ export const TRANSLATIONS: Translations = {
   zh: {
     appTitle: "多语言学习者家庭指南",
     appSubtitle: "了解您孩子的英语水平意味着什么，并发现在家和在学校支持语言成长的实用方法。",
-    selectLevel: "选择您孩子的水平：",
+    selectLevel: "选择您孩子的 WIDA 水平",
+    selectLevelHelp: "请使用孩子最近的 WIDA 或 ACCESS 报告中显示的水平。",
+    selectLevelEmpty: "请在上方选择一个水平，了解其含义以及您可以如何提供帮助。",
     levelLabel: "水平",
     listeningLabel: "听力",
     speakingLabel: "口语",
@@ -1154,7 +1162,7 @@ export const TRANSLATIONS: Translations = {
       "退出决定综合考虑课堂表现、语言使用情况和教师意见，而不仅仅是WIDA分数。",
       "退出项目后语言仍在持续发展。教师会监测学生的进步情况。",
     ],
-    startHereTitle: "第一次来？从这里开始。",
+    startHereTitle: "WIDA 水平如何运作",
     startHereSections: [
       {
         title: "什么是WIDA？",
@@ -1177,7 +1185,9 @@ export const TRANSLATIONS: Translations = {
   es: {
     appTitle: "Guía Familiar para Estudiantes Multilingües",
     appSubtitle: "Conozca qué significa el nivel de inglés de su hijo y descubra maneras prácticas de apoyar el crecimiento del idioma en casa y en la escuela.",
-    selectLevel: "Seleccione el nivel de su hijo:",
+    selectLevel: "Elija el nivel WIDA de su hijo",
+    selectLevelHelp: "Use el nivel que aparece en el informe WIDA o ACCESS más reciente de su hijo.",
+    selectLevelEmpty: "Elija un nivel arriba para conocer su significado y cómo puede ayudar.",
     levelLabel: "Nivel",
     listeningLabel: "Escuchar",
     speakingLabel: "Hablar",
@@ -1202,7 +1212,7 @@ export const TRANSLATIONS: Translations = {
       "Las decisiones de salida consideran el rendimiento en el aula, el uso del idioma y la opinión del maestro, no solo la puntuación WIDA.",
       "El idioma continúa desarrollándose después de salir del programa. Los maestros monitorean el progreso del estudiante.",
     ],
-    startHereTitle: "¿Es la primera vez? Empiece aquí.",
+    startHereTitle: "Cómo funcionan los niveles WIDA",
     startHereSections: [
       {
         title: "¿Qué es WIDA?",
@@ -1225,7 +1235,9 @@ export const TRANSLATIONS: Translations = {
   fr: {
     appTitle: "Guide Familial pour Apprenants Multilingues",
     appSubtitle: "Découvrez ce que signifie le niveau d'anglais de votre enfant et trouvez des façons concrètes de soutenir la croissance linguistique à la maison et à l'école.",
-    selectLevel: "Sélectionnez le niveau de votre enfant :",
+    selectLevel: "Choisissez le niveau WIDA de votre enfant",
+    selectLevelHelp: "Utilisez le niveau indiqué dans le dernier rapport WIDA ou ACCESS de votre enfant.",
+    selectLevelEmpty: "Choisissez un niveau ci-dessus pour comprendre sa signification et savoir comment aider.",
     levelLabel: "Niveau",
     listeningLabel: "Écoute",
     speakingLabel: "Expression orale",
@@ -1250,7 +1262,7 @@ export const TRANSLATIONS: Translations = {
       "Les décisions de sortie tiennent compte des résultats en classe, de l'utilisation de la langue et de l'avis des enseignants — pas seulement du score WIDA.",
       "La langue continue à se développer après la sortie du programme. Les enseignants suivent les progrès des élèves.",
     ],
-    startHereTitle: "Vous êtes nouveau ici ? Commencez ici.",
+    startHereTitle: "Comprendre les niveaux WIDA",
     startHereSections: [
       {
         title: "Qu'est-ce que WIDA ?",
@@ -1273,7 +1285,9 @@ export const TRANSLATIONS: Translations = {
   ja: {
     appTitle: "多言語学習者家族ガイド",
     appSubtitle: "お子様の英語レベルの意味を理解し、家庭と学校での言語の成長をサポートする実践的な方法を見つけましょう。",
-    selectLevel: "お子様のレベルを選択してください：",
+    selectLevel: "お子様のWIDAレベルを選択してください",
+    selectLevelHelp: "最新のWIDAまたはACCESSレポートに記載されたレベルを使用してください。",
+    selectLevelEmpty: "上のレベルを選択すると、その意味とご家庭でできる支援を確認できます。",
     levelLabel: "レベル",
     listeningLabel: "聞くこと",
     speakingLabel: "話すこと",
@@ -1298,7 +1312,7 @@ export const TRANSLATIONS: Translations = {
       "修了の決定は、WIDA得点だけでなく、授業での成績、言語使用、教師の意見を考慮します。",
       "言語はプログラム修了後も発達し続けます。教師は生徒の進捗を観察します。",
     ],
-    startHereTitle: "初めての方はこちら",
+    startHereTitle: "WIDAレベルの仕組み",
     startHereSections: [
       {
         title: "WIDAとは何ですか？",

@@ -5,8 +5,11 @@ import { Navbar } from "@/components/layout/Navbar";
 export default function NotFound() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <Navbar />
-      <main className="flex-1 flex items-center justify-center p-4">
+      <main id="main-content" tabIndex={-1} className="flex-1 flex items-center justify-center p-4">
         <div className="max-w-md w-full text-center space-y-6 bg-white p-12 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100">
           <div className="w-20 h-20 bg-rose-100 text-rose-500 rounded-full flex items-center justify-center mx-auto mb-6">
             <AlertCircle className="w-10 h-10" />

@@ -20,7 +20,7 @@ export function SkillsGrid({ skills, t, accent, badge }: { skills: Skill, t: any
               <div className={cn("p-2.5 rounded-xl bg-slate-50 group-hover:bg-opacity-50 transition-colors")}>
                 <Icon className={cn("w-5 h-5", accent)} />
               </div>
-              <h5 className="font-semibold text-lg tracking-wider uppercase text-sm">{item.label}</h5>
+              <h4 className="font-semibold tracking-wider uppercase text-sm">{item.label}</h4>
             </div>
             <p className="text-base text-slate-600 leading-relaxed flex-1">
               {item.text}

@@ -1,13 +1,13 @@
 # WIDA Family Guide
 
-**Created by Freddie Orozco**
+**Created by Federico Orozco**
 
 A multilingual web application designed to help families of English language learners understand their child's WIDA English proficiency level (1–6) and how to support their learning journey.
 
 ## Creator
 
-**Freddie Orozco**
-© 2026 Freddie Orozco. All rights reserved.
+**Federico Orozco**
+© 2026 Federico Orozco. All rights reserved.
 
 ## About This Tool
 
@@ -28,10 +28,10 @@ The WIDA Family Guide helps EAL (English as an Additional Language) families:
 
 ## Attribution
 
-This tool was designed and created by **Freddie Orozco** to support multilingual learners, families, and educators. Please credit the creator when sharing, presenting, adapting, or distributing this tool.
+This tool was designed and created by **Federico Orozco** to support multilingual learners, families, and educators. Please credit the creator when sharing, presenting, adapting, or distributing this tool.
 
 ## License
 
-See [LICENSE.md](LICENSE.md) for full terms. Educational use of the live application is welcome with proper credit. Copying, modifying, redistributing, selling, or rebranding the project requires written permission from Freddie Orozco.
+See [LICENSE.md](LICENSE.md) for full terms. Educational use of the live application is welcome with proper credit. Copying, modifying, redistributing, selling, or rebranding the project requires written permission from Federico Orozco.
 
 See also [NOTICE.md](NOTICE.md).

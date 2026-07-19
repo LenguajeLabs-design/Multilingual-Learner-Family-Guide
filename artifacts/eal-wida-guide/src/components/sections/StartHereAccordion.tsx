@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import { ChevronDown, HelpCircle, Users, Scale, BookOpenCheck } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -7,13 +7,19 @@ const SECTION_ICONS = [HelpCircle, Users, Scale, BookOpenCheck];
 export function StartHereAccordion({ t }: { t: any }) {
   const [open, setOpen] = useState(false);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const accordionId = useId();
+  const triggerId = `${accordionId}-trigger`;
+  const panelId = `${accordionId}-panel`;
 
   return (
     <div className="w-full">
       <button
+        type="button"
+        id={triggerId}
         onClick={() => setOpen((v) => !v)}
-        className="w-full flex items-center justify-between gap-3 px-5 py-4 rounded-2xl bg-white border border-slate-200 shadow-sm text-left transition-all hover:shadow-md"
+        className="min-h-11 w-full flex items-center justify-between gap-3 px-5 py-4 rounded-2xl bg-white border border-slate-200 shadow-sm text-left transition-all hover:shadow-md"
         aria-expanded={open}
+        aria-controls={panelId}
       >
         <span className="font-bold text-sm sm:text-base" style={{ color: "#142550" }}>
           {t.startHereTitle}
@@ -28,6 +34,9 @@ export function StartHereAccordion({ t }: { t: any }) {
         {open && (
           <motion.div
             key="content"
+            id={panelId}
+            role="region"
+            aria-labelledby={triggerId}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -38,12 +47,17 @@ export function StartHereAccordion({ t }: { t: any }) {
               {t.startHereSections.map(
                 (section: { title: string; text: string }, i: number) => {
                   const SectionIcon = SECTION_ICONS[i % SECTION_ICONS.length];
+                  const sectionTriggerId = `${accordionId}-section-${i}-trigger`;
+                  const sectionPanelId = `${accordionId}-section-${i}-panel`;
                   return (
                   <div key={i} className="bg-white border border-slate-200 rounded-2xl overflow-hidden">
                     <button
+                      type="button"
+                      id={sectionTriggerId}
                       onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                      className="w-full flex items-center justify-between gap-3 px-5 py-3.5 text-left"
+                      className="min-h-11 w-full flex items-center justify-between gap-3 px-5 py-3.5 text-left"
                       aria-expanded={openIndex === i}
+                      aria-controls={sectionPanelId}
                     >
                       <span className="flex items-center gap-3">
                         <SectionIcon
@@ -68,6 +82,9 @@ export function StartHereAccordion({ t }: { t: any }) {
                       {openIndex === i && (
                         <motion.div
                           key="inner"
+                          id={sectionPanelId}
+                          role="region"
+                          aria-labelledby={sectionTriggerId}
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: "auto" }}
                           exit={{ opacity: 0, height: 0 }}

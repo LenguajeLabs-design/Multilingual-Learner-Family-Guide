@@ -6,6 +6,7 @@ import Home from "@/pages/Home";
 import Credits from "@/pages/Credits";
 import References from "@/pages/References";
 import NotFound from "@/pages/not-found";
+import { MotionConfig } from "framer-motion";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -29,14 +30,16 @@ function Router() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-          <Router />
-        </WouterRouter>
-        <Toaster />
-      </TooltipProvider>
-    </QueryClientProvider>
+    <MotionConfig reducedMotion="user">
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+            <Router />
+          </WouterRouter>
+          <Toaster />
+        </TooltipProvider>
+      </QueryClientProvider>
+    </MotionConfig>
   );
 }
 

@@ -12,18 +12,21 @@ const LEVEL_ICONS: Record<string, LucideIcon> = {
   Trophy,
 };
 
-export function LevelSelector({ levels, selectedId, onSelect }: { levels: WIDALevel[], selectedId: number, onSelect: (id: 1|2|3|4|5|6) => void }) {
+export function LevelSelector({ levels, selectedId, onSelect, labelId }: { levels: WIDALevel[], selectedId: number, onSelect: (id: 1|2|3|4|5|6) => void, labelId: string }) {
   return (
-    <div className="grid grid-cols-3 md:grid-cols-6 gap-2 sm:gap-3">
+    <div role="group" aria-labelledby={labelId} className="grid grid-cols-3 md:grid-cols-6 gap-2 sm:gap-3">
       {levels.map((level) => {
         const isSelected = level.id === selectedId;
         const Icon = LEVEL_ICONS[level.icon] ?? Sprout;
         return (
           <button
+            type="button"
             key={level.id}
-            onClick={() => onSelect(level.id as any)}
+            onClick={() => onSelect(level.id as 1|2|3|4|5|6)}
+            aria-pressed={isSelected}
+            aria-label={`${level.id}: ${level.name}`}
             className={cn(
-              "p-3 sm:p-4 rounded-xl sm:rounded-2xl border-2 text-center transition-all flex flex-col items-center justify-center gap-1 sm:gap-2",
+              "min-h-11 p-3 sm:p-4 rounded-xl sm:rounded-2xl border-2 text-center transition-all flex flex-col items-center justify-center gap-1 sm:gap-2",
               isSelected 
                 ? `${level.border} ${level.color} shadow-sm ring-4 ring-white` 
                 : "border-slate-100 bg-white hover:border-slate-200 hover:bg-slate-50/80 shadow-sm"

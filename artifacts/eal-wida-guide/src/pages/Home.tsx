@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { LevelSelector } from "@/components/sections/LevelSelector";
@@ -17,15 +17,32 @@ export default function Home() {
   const levels = getLevels(lang);
   const selectedLevel = levels.find(l => l.id === selectedLevelId)!;
 
+  useEffect(() => {
+    const documentLanguages: Record<string, string> = {
+      en: "en",
+      es: "es",
+      fr: "fr",
+      zh: "zh-Hans",
+      ja: "ja",
+      ko: "ko",
+    };
+
+    document.documentElement.lang = documentLanguages[lang] ?? "en";
+    document.title = t.appTitle;
+  }, [lang, t.appTitle]);
+
   const handlePrint = () => {
     window.print();
   };
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
+      <a href="#main-content" className="skip-link no-print">
+        Skip to main content
+      </a>
       <Navbar lang={lang} setLang={setLang} onPrint={handlePrint} t={t} />
       
-      <main className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 flex flex-col gap-14">
+      <main id="main-content" tabIndex={-1} className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 flex flex-col gap-14">
         {/* Hero Section */}
         <section className="text-center space-y-6 no-print">
           <motion.div 
@@ -61,11 +78,12 @@ export default function Home() {
 
         {/* Level Selector */}
         <section className="no-print w-full max-w-4xl mx-auto">
-          <h2 className="text-sm mb-6 text-center">{t.selectLevel}</h2>
+          <h2 id="level-selector-label" className="text-sm mb-6 text-center">{t.selectLevel}</h2>
           <LevelSelector 
             levels={levels} 
             selectedId={selectedLevelId} 
             onSelect={setSelectedLevelId} 
+            labelId="level-selector-label"
           />
         </section>
 

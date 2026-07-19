@@ -55,6 +55,9 @@ const references = [
 export default function References() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <header className="w-full bg-white/80 backdrop-blur-md border-b border-slate-200 px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between sticky top-0 z-50 shadow-sm">
         <div className="flex items-center gap-3">
           <div
@@ -63,23 +66,23 @@ export default function References() {
           >
             <BookOpen className="w-5 h-5" />
           </div>
-          <h1
+          <p
             className="font-semibold text-base hidden sm:block normal-case tracking-wide"
             style={{ color: "#142550" }}
           >
             Multilingual Learner Family Guide
-          </h1>
+          </p>
         </div>
         <Link
           href="/"
-          className="flex items-center gap-2 text-sm font-semibold py-2 px-4 rounded-lg transition-colors shadow-sm text-white"
+          className="min-h-11 flex items-center gap-2 text-sm font-semibold py-2 px-4 rounded-lg transition-colors shadow-sm text-white"
           style={{ background: "#142550" }}
         >
           <span>← Back to Guide</span>
         </Link>
       </header>
 
-      <main className="flex-1 w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col gap-10">
+      <main id="main-content" tabIndex={-1} className="flex-1 w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col gap-10">
         <div className="text-center space-y-4">
           <div
             className="w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-md mx-auto"

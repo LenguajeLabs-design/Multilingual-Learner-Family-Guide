@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: 'Montserrat', system-ui, sans-serif;
-  --font-display: 'Montserrat', system-ui, sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Segoe UI", sans-serif;
 
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -25,32 +25,40 @@
   
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
+  --color-surface: hsl(var(--surface));
+  --color-surface-muted: hsl(var(--surface-muted));
 }
 
 :root {
-  --background: 40 30% 97%;
-  --foreground: 223 60% 12%;
+  --background: 45 18% 97%;
+  --foreground: 222 32% 13%;
 
-  /* School navy #142550 → hsl(223, 60%, 20%) */
-  --primary: 223 60% 20%;
+  --primary: 223 48% 21%;
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 223 20% 92%;
-  --secondary-foreground: 223 60% 20%;
+  --secondary: 220 20% 95%;
+  --secondary-foreground: 223 48% 21%;
 
-  --muted: 40 10% 92%;
-  --muted-foreground: 220 10% 45%;
+  --muted: 40 12% 93%;
+  --muted-foreground: 220 9% 42%;
 
-  /* School red #C82C39 → hsl(355, 63%, 48%) */
-  --accent: 355 63% 48%;
+  --accent: 355 55% 46%;
   --accent-foreground: 0 0% 100%;
 
-  --border: 40 20% 88%;
-  --input: 40 20% 92%;
-  --ring: 223 60% 20%;
+  --border: 220 14% 89%;
+  --input: 220 16% 93%;
+  --ring: 223 48% 30%;
 
   --card: 0 0% 100%;
-  --card-foreground: 223 60% 12%;
+  --card-foreground: 222 32% 13%;
+  --surface: 0 0% 100%;
+  --surface-muted: 220 20% 97%;
+
+  --radius-control: 0.875rem;
+  --radius-card: 1.25rem;
+  --radius-panel: 1.75rem;
+  --shadow-soft: 0 16px 45px rgba(20, 37, 80, 0.07);
+  --shadow-control: 0 1px 2px rgba(20, 37, 80, 0.05);
 }
 
 @layer base {
@@ -60,7 +68,12 @@
   body {
     @apply bg-background text-foreground antialiased font-sans;
     font-weight: 400;
-    selection-color: #142550;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: hsl(var(--primary) / 0.16);
+    color: hsl(var(--foreground));
   }
   :where(a, button, select, input, textarea, [tabindex]):focus-visible {
     outline: 3px solid hsl(var(--ring));
@@ -71,34 +84,32 @@
   }
   h1 {
     font-family: var(--font-display);
-    font-weight: 800;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: #142550;
+    font-weight: 750;
+    letter-spacing: -0.035em;
+    color: hsl(var(--foreground));
   }
   h2 {
     font-family: var(--font-display);
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #142550;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: hsl(var(--foreground));
   }
   h3 {
     font-family: var(--font-display);
-    font-weight: 800;
-    letter-spacing: 0.02em;
-    color: #142550;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: hsl(var(--foreground));
   }
   h4 {
     font-family: var(--font-display);
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    color: #142550;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+    color: hsl(var(--foreground));
   }
   h5, h6 {
     font-family: var(--font-display);
     font-weight: 600;
-    color: #142550;
+    color: hsl(var(--foreground));
   }
 }
 

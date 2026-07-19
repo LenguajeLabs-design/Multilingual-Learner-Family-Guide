@@ -8,6 +8,7 @@ import { ProgressSection } from "@/components/sections/ProgressSection";
 import { getLevels, TRANSLATIONS } from "@/data/wida-content";
 import { StartHereAccordion } from "@/components/sections/StartHereAccordion";
 import { motion } from "framer-motion";
+import { MousePointerClick } from "lucide-react";
 
 export default function Home() {
   const [lang, setLang] = useState("en");
@@ -50,7 +51,7 @@ export default function Home() {
           <motion.h1 
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            className="normal-case tracking-tight text-3xl sm:text-4xl md:text-5xl font-extrabold text-balance max-w-4xl mx-auto"
+            className="text-3xl sm:text-4xl md:text-5xl text-balance max-w-4xl mx-auto"
           >
             {t.appTitle}
           </motion.h1>
@@ -58,7 +59,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.08 }}
-            className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed text-balance font-normal"
+            className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-balance"
           >
             {t.appSubtitle}
           </motion.p>
@@ -67,8 +68,8 @@ export default function Home() {
         {/* Level Selector */}
         <section className="no-print w-full max-w-4xl mx-auto">
           <div className="text-center mb-6">
-            <h2 id="level-selector-label" className="normal-case tracking-normal text-lg sm:text-xl font-bold">{t.selectLevel}</h2>
-            <p className="mt-2 text-sm sm:text-base text-slate-500 text-balance">{t.selectLevelHelp}</p>
+            <h2 id="level-selector-label" className="text-lg sm:text-xl">{t.selectLevel}</h2>
+            <p className="mt-2 text-sm sm:text-base text-muted-foreground text-balance">{t.selectLevelHelp}</p>
           </div>
           <LevelSelector 
             levels={levels} 
@@ -95,8 +96,11 @@ export default function Home() {
             </div>
           </>
         ) : (
-          <div className="no-print max-w-2xl w-full mx-auto rounded-2xl border border-dashed border-slate-300 bg-white/60 px-5 py-6 text-center">
-            <p className="text-sm sm:text-base text-slate-600">{t.selectLevelEmpty}</p>
+          <div className="no-print max-w-2xl w-full mx-auto rounded-[var(--radius-card)] border border-dashed border-border bg-card/70 px-5 py-6 text-center">
+            <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/[0.07] text-primary">
+              <MousePointerClick className="h-5 w-5" aria-hidden="true" />
+            </div>
+            <p className="text-sm sm:text-base text-muted-foreground">{t.selectLevelEmpty}</p>
           </div>
         )}
 

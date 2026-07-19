@@ -17,16 +17,16 @@ export function StartHereAccordion({ t }: { t: any }) {
         type="button"
         id={triggerId}
         onClick={() => setOpen((v) => !v)}
-        className="min-h-11 w-full flex items-center justify-between gap-3 px-5 py-4 rounded-2xl bg-white border border-slate-200 shadow-sm text-left transition-all hover:shadow-md"
+        className="min-h-11 w-full flex items-center justify-between gap-3 px-5 py-4 rounded-[var(--radius-card)] bg-card border border-border [box-shadow:var(--shadow-control)] text-left transition-colors hover:bg-surface-muted"
         aria-expanded={open}
         aria-controls={panelId}
       >
-        <span className="font-bold text-sm sm:text-base" style={{ color: "#142550" }}>
+        <span className="font-semibold text-sm sm:text-base text-foreground">
           {t.startHereTitle}
         </span>
         <ChevronDown
-          className="flex-shrink-0 w-5 h-5 transition-transform duration-300"
-          style={{ color: "#142550", transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+          className="flex-shrink-0 w-5 h-5 text-muted-foreground transition-transform duration-300"
+          style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
         />
       </button>
 
@@ -50,29 +50,27 @@ export function StartHereAccordion({ t }: { t: any }) {
                   const sectionTriggerId = `${accordionId}-section-${i}-trigger`;
                   const sectionPanelId = `${accordionId}-section-${i}-panel`;
                   return (
-                  <div key={i} className="bg-white border border-slate-200 rounded-2xl overflow-hidden">
+                  <div key={i} className="bg-card border border-border rounded-[var(--radius-card)] overflow-hidden">
                     <button
                       type="button"
                       id={sectionTriggerId}
                       onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                      className="min-h-11 w-full flex items-center justify-between gap-3 px-5 py-3.5 text-left"
+                      className="min-h-11 w-full flex items-center justify-between gap-3 px-5 py-3.5 text-left transition-colors hover:bg-surface-muted"
                       aria-expanded={openIndex === i}
                       aria-controls={sectionPanelId}
                     >
                       <span className="flex items-center gap-3">
                         <SectionIcon
-                          className="flex-shrink-0 w-4 h-4"
-                          style={{ color: "#C82C39" }}
+                          className="flex-shrink-0 w-4 h-4 text-accent"
                           strokeWidth={1.75}
                         />
-                        <span className="font-semibold text-sm" style={{ color: "#142550" }}>
+                        <span className="font-semibold text-sm text-foreground">
                           {section.title}
                         </span>
                       </span>
                       <ChevronDown
-                        className="flex-shrink-0 w-4 h-4 transition-transform duration-200"
+                        className="flex-shrink-0 w-4 h-4 text-muted-foreground transition-transform duration-200"
                         style={{
-                          color: "#C82C39",
                           transform: openIndex === i ? "rotate(180deg)" : "rotate(0deg)",
                         }}
                       />
@@ -93,10 +91,9 @@ export function StartHereAccordion({ t }: { t: any }) {
                         >
                           <div className="px-5 pb-4">
                             <div
-                              className="border-l-4 pl-4 py-1"
-                              style={{ borderColor: "#C82C39" }}
+                              className="border-l-2 border-accent/60 pl-4 py-1"
                             >
-                              <p className="text-slate-600 text-sm leading-relaxed">
+                              <p className="text-muted-foreground text-sm leading-relaxed">
                                 {section.text}
                               </p>
                             </div>

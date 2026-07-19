@@ -2,7 +2,7 @@ import { Skill } from "@/data/wida-content";
 import { cn } from "@/lib/utils";
 import { Ear, Mic, BookOpenText, PenTool } from "lucide-react";
 
-export function SkillsGrid({ skills, t, accent, badge }: { skills: Skill, t: any, accent: string, badge: string }) {
+export function SkillsGrid({ skills, t, accent }: { skills: Skill, t: any, accent: string }) {
   const items = [
     { key: 'listening', label: t.listeningLabel, icon: Ear, text: skills.listening },
     { key: 'speaking', label: t.speakingLabel, icon: Mic, text: skills.speaking },
@@ -15,14 +15,14 @@ export function SkillsGrid({ skills, t, accent, badge }: { skills: Skill, t: any
       {items.map((item) => {
         const Icon = item.icon;
         return (
-          <div key={item.key} className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex flex-col group hover:shadow-md transition-shadow">
+          <div key={item.key} className="bg-surface-muted rounded-[var(--radius-card)] p-6 border border-border/70 flex flex-col">
             <div className="flex items-center gap-3 mb-3">
-              <div className={cn("p-2.5 rounded-xl bg-slate-50 group-hover:bg-opacity-50 transition-colors")}>
-                <Icon className={cn("w-5 h-5", accent)} />
+              <div className="p-2.5 rounded-[var(--radius-control)] bg-card border border-border/70">
+                <Icon className={cn("w-5 h-5", accent)} aria-hidden="true" />
               </div>
-              <h4 className="font-semibold tracking-wider uppercase text-sm">{item.label}</h4>
+              <h4 className="text-base">{item.label}</h4>
             </div>
-            <p className="text-base text-slate-600 leading-relaxed flex-1">
+            <p className="text-base text-muted-foreground leading-relaxed flex-1">
               {item.text}
             </p>
           </div>

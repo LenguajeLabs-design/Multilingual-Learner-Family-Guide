@@ -12,7 +12,7 @@ const LEVEL_ICONS: Record<string, LucideIcon> = {
   Trophy,
 };
 
-export function LevelSelector({ levels, selectedId, onSelect, labelId }: { levels: WIDALevel[], selectedId: number, onSelect: (id: 1|2|3|4|5|6) => void, labelId: string }) {
+export function LevelSelector({ levels, selectedId, onSelect, labelId }: { levels: WIDALevel[], selectedId: number | null, onSelect: (id: 1|2|3|4|5|6) => void, labelId: string }) {
   return (
     <div role="group" aria-labelledby={labelId} className="grid grid-cols-3 md:grid-cols-6 gap-2 sm:gap-3">
       {levels.map((level) => {

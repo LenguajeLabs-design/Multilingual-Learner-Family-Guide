@@ -5,6 +5,7 @@ type NavbarProps = {
   lang?: string;
   setLang?: (l: string) => void;
   onPrint?: () => void;
+  showPrint?: boolean;
   t?: typeof TRANSLATIONS.en;
 };
 
@@ -12,6 +13,7 @@ export function Navbar({
   lang = "en",
   setLang = () => {},
   onPrint = () => {},
+  showPrint = false,
   t = TRANSLATIONS.en,
 }: NavbarProps) {
   return (
@@ -45,15 +47,17 @@ export function Navbar({
           <option value="ko">한국어</option>
         </select>
 
-        <button 
-          type="button"
-          onClick={onPrint}
-          className="min-h-11 min-w-11 flex items-center justify-center gap-2 text-sm font-semibold py-2 px-4 rounded-lg transition-colors shadow-sm text-white"
-          style={{ background: "#142550" }}
-        >
-          <Printer className="w-4 h-4" />
-          <span className="hidden sm:inline">{t.printButton}</span>
-        </button>
+        {showPrint && (
+          <button
+            type="button"
+            onClick={onPrint}
+            aria-label={t.printButton}
+            className="min-h-11 min-w-11 flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-3 sm:px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm transition-colors hover:bg-slate-50"
+          >
+            <Printer className="w-4 h-4" aria-hidden="true" />
+            <span className="hidden sm:inline">{t.printButton}</span>
+          </button>
+        )}
       </div>
     </header>
   );

@@ -11,11 +11,13 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   const [lang, setLang] = useState("en");
-  const [selectedLevelId, setSelectedLevelId] = useState<1|2|3|4|5|6>(1);
+  const [selectedLevelId, setSelectedLevelId] = useState<1|2|3|4|5|6|null>(null);
 
   const t = TRANSLATIONS[lang] || TRANSLATIONS.en;
   const levels = getLevels(lang);
-  const selectedLevel = levels.find(l => l.id === selectedLevelId)!;
+  const selectedLevel = selectedLevelId
+    ? levels.find((level) => level.id === selectedLevelId)
+    : undefined;
 
   useEffect(() => {
     const documentLanguages: Record<string, string> = {
@@ -40,45 +42,34 @@ export default function Home() {
       <a href="#main-content" className="skip-link no-print">
         Skip to main content
       </a>
-      <Navbar lang={lang} setLang={setLang} onPrint={handlePrint} t={t} />
+      <Navbar lang={lang} setLang={setLang} onPrint={handlePrint} showPrint={selectedLevel !== undefined} t={t} />
       
-      <main id="main-content" tabIndex={-1} className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 flex flex-col gap-14">
+      <main id="main-content" tabIndex={-1} className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-14 flex flex-col gap-10 md:gap-14">
         {/* Hero Section */}
-        <section className="text-center space-y-6 no-print">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm mx-auto"
-          >
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm font-semibold text-slate-600 uppercase tracking-widest">Multilingual Learner Guide</span>
-          </motion.div>
+        <section className="text-center space-y-4 no-print">
           <motion.h1 
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-balance"
+            className="normal-case tracking-tight text-3xl sm:text-4xl md:text-5xl font-extrabold text-balance max-w-4xl mx-auto"
           >
             {t.appTitle}
           </motion.h1>
           <motion.p 
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed text-balance font-normal"
+            transition={{ delay: 0.08 }}
+            className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed text-balance font-normal"
           >
             {t.appSubtitle}
           </motion.p>
         </section>
 
-        {/* Start Here Accordion */}
-        <section className="no-print w-full max-w-2xl mx-auto -mt-6">
-          <StartHereAccordion t={t} />
-        </section>
-
         {/* Level Selector */}
         <section className="no-print w-full max-w-4xl mx-auto">
-          <h2 id="level-selector-label" className="text-sm mb-6 text-center">{t.selectLevel}</h2>
+          <div className="text-center mb-6">
+            <h2 id="level-selector-label" className="normal-case tracking-normal text-lg sm:text-xl font-bold">{t.selectLevel}</h2>
+            <p className="mt-2 text-sm sm:text-base text-slate-500 text-balance">{t.selectLevelHelp}</p>
+          </div>
           <LevelSelector 
             levels={levels} 
             selectedId={selectedLevelId} 
@@ -87,17 +78,32 @@ export default function Home() {
           />
         </section>
 
-        {/* Level Detail */}
-        <div className="w-full">
-          <LevelDetail 
-            level={selectedLevel} 
-            t={t} 
-          />
-        </div>
+        {selectedLevel ? (
+          <>
+            <p className="sr-only" aria-live="polite">
+              {t.levelLabel} {selectedLevel.id}: {selectedLevel.name}
+            </p>
+            <section className="w-full">
+              <LevelDetail
+                level={selectedLevel}
+                t={t}
+              />
+            </section>
 
-        <div className="w-full">
-          <ProgressSection t={t} />
-        </div>
+            <div className="w-full">
+              <ProgressSection t={t} />
+            </div>
+          </>
+        ) : (
+          <div className="no-print max-w-2xl w-full mx-auto rounded-2xl border border-dashed border-slate-300 bg-white/60 px-5 py-6 text-center">
+            <p className="text-sm sm:text-base text-slate-600">{t.selectLevelEmpty}</p>
+          </div>
+        )}
+
+        {/* Secondary help */}
+        <section className="no-print w-full max-w-2xl mx-auto">
+          <StartHereAccordion t={t} />
+        </section>
       </main>
 
       <Footer t={t} />

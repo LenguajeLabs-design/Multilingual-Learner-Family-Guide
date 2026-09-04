@@ -1,24 +1,10 @@
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <rect width="512" height="512" rx="96" fill="#142550"/>
-  <!-- Red accent bar at bottom -->
-  <rect x="0" y="416" width="512" height="96" rx="0" fill="#C82C39"/>
-  <rect x="0" y="380" width="512" height="96" rx="96" fill="#C82C39"/>
-  <!-- Open book icon (white) -->
-  <!-- Left page -->
-  <path d="M256 152 C256 152 180 160 148 188 C140 194 136 202 136 212 L136 340 C136 340 176 320 256 324 L256 152Z" fill="white" opacity="0.95"/>
-  <!-- Right page -->
-  <path d="M256 152 C256 152 332 160 364 188 C372 194 376 202 376 212 L376 340 C376 340 336 320 256 324 L256 152Z" fill="white" opacity="0.75"/>
-  <!-- Spine -->
-  <rect x="251" y="148" width="10" height="180" rx="4" fill="white" opacity="0.5"/>
-  <!-- Page lines left -->
-  <line x1="168" y1="228" x2="242" y2="222" stroke="#142550" stroke-width="8" stroke-linecap="round" opacity="0.25"/>
-  <line x1="168" y1="252" x2="242" y2="246" stroke="#142550" stroke-width="8" stroke-linecap="round" opacity="0.25"/>
-  <line x1="168" y1="276" x2="242" y2="271" stroke="#142550" stroke-width="8" stroke-linecap="round" opacity="0.25"/>
-  <!-- Page lines right -->
-  <line x1="270" y1="222" x2="344" y2="228" stroke="#142550" stroke-width="8" stroke-linecap="round" opacity="0.25"/>
-  <line x1="270" y1="246" x2="344" y2="252" stroke="#142550" stroke-width="8" stroke-linecap="round" opacity="0.25"/>
-  <line x1="270" y1="271" x2="344" y2="276" stroke="#142550" stroke-width="8" stroke-linecap="round" opacity="0.25"/>
-  <!-- "WFG" initials on red bar -->
-  <text x="256" y="448" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white" letter-spacing="6">WFG</text>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">My Multilingual Family</title>
+  <desc id="desc">A home containing two overlapping conversation bubbles.</desc>
+  <rect width="512" height="512" rx="128" fill="#142550"/>
+  <path d="M116 246L256 126L396 246" stroke="#FFFFFF" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M156 234V356C156 373.673 170.327 388 188 388H324C341.673 388 356 373.673 356 356V234" stroke="#FFFFFF" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M181 263C181 241.461 198.461 224 220 224H254C275.539 224 293 241.461 293 263V278C293 299.539 275.539 317 254 317H229L204 339V317H220C198.461 317 181 299.539 181 278V263Z" fill="#F4A8A6"/>
+  <path d="M250 288C250 266.461 267.461 249 289 249H318C339.539 249 357 266.461 357 288V303C357 324.539 339.539 342 318 342H301L280 360V342H289C267.461 342 250 324.539 250 303V288Z" fill="#D9E1F7"/>
+  <path d="M207 271H261M276 295H331" stroke="#142550" stroke-width="12" stroke-linecap="round" opacity=".82"/>
 </svg>

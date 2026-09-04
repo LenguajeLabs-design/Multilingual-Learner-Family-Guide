@@ -1,4 +1,4 @@
-import { BookOpen, Printer } from "lucide-react";
+import { Printer } from "lucide-react";
 import { TRANSLATIONS } from "@/data/wida-content";
 
 type NavbarProps = {
@@ -19,9 +19,11 @@ export function Navbar({
   return (
     <header className="w-full bg-card/90 backdrop-blur-xl border-b border-border/80 px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between no-print sticky top-0 z-50 transition-colors">
       <div className="flex items-center gap-3">
-        <div className="w-9 h-9 rounded-[var(--radius-control)] flex items-center justify-center bg-primary text-primary-foreground [box-shadow:var(--shadow-control)]" aria-hidden="true">
-          <BookOpen className="w-5 h-5" />
-        </div>
+        <img
+          src={`${import.meta.env.BASE_URL}logo-icon.svg`}
+          alt="My Multilingual Family"
+          className="w-10 h-10 rounded-[var(--radius-control)] [box-shadow:var(--shadow-control)] flex-shrink-0"
+        />
         <p className="font-semibold text-base hidden sm:block tracking-tight text-foreground">
           {t.appTitle}
         </p>

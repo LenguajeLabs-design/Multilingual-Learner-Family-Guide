@@ -17,8 +17,8 @@ export function Footer({ t }: { t: any }) {
         <div className="flex items-center gap-4">
           <img
             src={logoSrc}
-            alt="Multilingual Learner Family Guide logo"
-            className="w-10 h-10 rounded-[var(--radius-control)] [box-shadow:var(--shadow-control)] opacity-85 flex-shrink-0"
+            alt="My Multilingual Family"
+            className="w-10 h-10 rounded-[var(--radius-control)] [box-shadow:var(--shadow-control)] flex-shrink-0"
           />
           <div className="text-left leading-snug">
             <p className="font-semibold text-foreground/85">Created by Federico Orozco</p>

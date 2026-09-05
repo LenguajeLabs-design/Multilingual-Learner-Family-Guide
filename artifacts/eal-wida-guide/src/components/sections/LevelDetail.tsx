@@ -2,7 +2,7 @@ import { WIDALevel } from "@/data/wida-content";
 import { cn } from "@/lib/utils";
 import { SkillsGrid } from "./SkillsGrid";
 import { CheckCircle2, HeartHandshake, Sparkles } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { LOCALIZED_SUPPORT_EXAMPLES } from "@/data/support-examples";
 
@@ -105,6 +105,7 @@ const LEVEL_EXAMPLES: Record<number, { school: string[]; home: string[] }> = {
 };
 
 export function LevelDetail({ level, t, lang }: { level: WIDALevel, t: any, lang: string }) {
+  const prefersReducedMotion = useReducedMotion();
   const localizedExamples = lang === "en"
     ? LEVEL_EXAMPLES[level.id]
     : LOCALIZED_SUPPORT_EXAMPLES[lang]?.[level.id];
@@ -115,12 +116,18 @@ export function LevelDetail({ level, t, lang }: { level: WIDALevel, t: any, lang
     <AnimatePresence mode="wait">
       <motion.div
         key={level.id}
-        initial={{ opacity: 0, y: 10 }}
+        initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -10 }}
+        exit={prefersReducedMotion ? undefined : { opacity: 0, y: -8 }}
+        transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.34, ease: [0.2, 0.8, 0.2, 1] }}
         className="rounded-[var(--radius-panel)] bg-card p-6 sm:p-8 md:p-10 lg:p-12 border border-border transition-all duration-300 [box-shadow:var(--shadow-soft)]"
       >
-        <div className="mb-10 text-center sm:text-left">
+        <motion.div
+          className="mb-10 text-center sm:text-left"
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.36, delay: 0.04, ease: [0.2, 0.8, 0.2, 1] }}
+        >
           <div className="print-only mb-6 hidden">
             <h1 className="text-3xl border-b pb-4">
               {t.appTitle} — {t.levelLabel} {level.id}: {level.name}
@@ -143,11 +150,16 @@ export function LevelDetail({ level, t, lang }: { level: WIDALevel, t: any, lang
           <p className="text-foreground/75 text-base sm:text-lg md:text-xl leading-relaxed max-w-4xl text-balance">
             {level.description}
           </p>
-        </div>
+        </motion.div>
 
         <SkillsGrid skills={level.skills} t={t} accent={level.accent} />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-10 print-break-inside-avoid">
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-10 print-break-inside-avoid"
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.42, delay: 0.5, ease: [0.2, 0.8, 0.2, 1] }}
+        >
           {/* Supports Section */}
           <div className="bg-surface-muted rounded-[var(--radius-card)] p-6 sm:p-8 border border-border/70">
             <div className="flex items-center gap-3 mb-6">
@@ -209,10 +221,15 @@ export function LevelDetail({ level, t, lang }: { level: WIDALevel, t: any, lang
               ))}
             </ol>
           </div>
-        </div>
+        </motion.div>
 
         {/* Encouragement Callout */}
-        <div className="mt-8 bg-primary/[0.045] rounded-[var(--radius-card)] p-6 sm:p-8 border border-primary/10 flex flex-col sm:flex-row gap-5 items-start sm:items-center print-break-inside-avoid">
+        <motion.div
+          className="mt-8 bg-primary/[0.045] rounded-[var(--radius-card)] p-6 sm:p-8 border border-primary/10 flex flex-col sm:flex-row gap-5 items-start sm:items-center print-break-inside-avoid"
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.42, delay: 0.6, ease: [0.2, 0.8, 0.2, 1] }}
+        >
           <div className={cn("p-3 rounded-[var(--radius-control)] flex-shrink-0", level.color)}>
             <Sparkles className={cn("w-7 h-7", level.accent)} aria-hidden="true" />
           </div>
@@ -222,7 +239,7 @@ export function LevelDetail({ level, t, lang }: { level: WIDALevel, t: any, lang
               {level.encouragement}
             </p>
           </div>
-        </div>
+        </motion.div>
       </motion.div>
     </AnimatePresence>
   );

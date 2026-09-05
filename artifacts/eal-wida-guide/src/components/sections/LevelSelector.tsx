@@ -1,6 +1,7 @@
 import { WIDALevel } from "@/data/wida-content";
 import { cn } from "@/lib/utils";
 import { Sprout, Footprints, MessageCircle, TrendingUp, Milestone, Trophy, type LucideIcon } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
 
 const LEVEL_ICONS: Record<string, LucideIcon> = {
   Sprout,
@@ -12,18 +13,24 @@ const LEVEL_ICONS: Record<string, LucideIcon> = {
 };
 
 export function LevelSelector({ levels, selectedId, onSelect, labelId }: { levels: WIDALevel[], selectedId: number | null, onSelect: (id: 1|2|3|4|5|6) => void, labelId: string }) {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <div role="group" aria-labelledby={labelId} className="grid grid-cols-3 md:grid-cols-6 gap-2 sm:gap-3">
       {levels.map((level) => {
         const isSelected = level.id === selectedId;
         const Icon = LEVEL_ICONS[level.icon] ?? Sprout;
         return (
-          <button
+          <motion.button
             type="button"
             key={level.id}
             onClick={() => onSelect(level.id as 1|2|3|4|5|6)}
             aria-pressed={isSelected}
             aria-label={`${level.id}: ${level.name}`}
+            animate={prefersReducedMotion ? undefined : { y: isSelected ? -2 : 0, scale: isSelected ? 1.015 : 1 }}
+            whileHover={prefersReducedMotion ? undefined : { y: -1, scale: 1.01 }}
+            whileTap={prefersReducedMotion ? undefined : { scale: 0.98 }}
+            transition={prefersReducedMotion ? { duration: 0 } : { type: "spring", stiffness: 360, damping: 24, mass: 0.7 }}
             className={cn(
               "min-h-28 p-3 sm:p-4 rounded-[var(--radius-card)] border text-center transition-[background-color,border-color,box-shadow,transform] flex flex-col items-center justify-center gap-1.5 sm:gap-2 active:scale-[0.98]",
               isSelected 
@@ -44,7 +51,7 @@ export function LevelSelector({ levels, selectedId, onSelect, labelId }: { level
             )}>
               {level.name}
             </span>
-          </button>
+          </motion.button>
         );
       })}
     </div>

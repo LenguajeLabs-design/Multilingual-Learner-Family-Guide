@@ -1,8 +1,10 @@
 import { Skill } from "@/data/wida-content";
 import { cn } from "@/lib/utils";
 import { Ear, Mic, BookOpenText, PenTool } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
 
 export function SkillsGrid({ skills, t, accent }: { skills: Skill, t: any, accent: string }) {
+  const prefersReducedMotion = useReducedMotion();
   const items = [
     { key: 'listening', label: t.listeningLabel, icon: Ear, text: skills.listening },
     { key: 'speaking', label: t.speakingLabel, icon: Mic, text: skills.speaking },
@@ -12,12 +14,18 @@ export function SkillsGrid({ skills, t, accent }: { skills: Skill, t: any, accen
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 print-break-inside-avoid">
-      {items.map((item) => {
+      {items.map((item, index) => {
         const Icon = item.icon;
         return (
-          <div key={item.key} className="bg-surface-muted rounded-[var(--radius-card)] p-6 border border-border/70 flex flex-col">
+          <motion.div
+            key={item.key}
+            className="skill-card-motion bg-surface-muted rounded-[var(--radius-card)] p-6 border border-border/70 flex flex-col"
+            initial={prefersReducedMotion ? false : { opacity: 0, y: 16, scale: 0.985 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.46, delay: 0.12 + index * 0.09, ease: [0.2, 0.8, 0.2, 1] }}
+          >
             <div className="flex items-center gap-3 mb-3">
-              <div className="p-2.5 rounded-[var(--radius-control)] bg-card border border-border/70">
+              <div className="skill-card-motion__icon p-2.5 rounded-[var(--radius-control)] bg-card border border-border/70">
                 <Icon className={cn("w-5 h-5", accent)} aria-hidden="true" />
               </div>
               <h4 className="text-base">{item.label}</h4>
@@ -25,7 +33,7 @@ export function SkillsGrid({ skills, t, accent }: { skills: Skill, t: any, accen
             <p className="text-base text-muted-foreground leading-relaxed flex-1">
               {item.text}
             </p>
-          </div>
+          </motion.div>
         );
       })}
     </div>

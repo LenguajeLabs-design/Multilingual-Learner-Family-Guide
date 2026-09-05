@@ -131,6 +131,31 @@
   transform: translateY(0);
 }
 
+/* A quiet interaction layer for the language-skill cards. */
+.skill-card-motion {
+  transition: transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 260ms ease,
+    border-color 260ms ease;
+}
+
+.skill-card-motion__icon {
+  transition: transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    background-color 260ms ease;
+}
+
+@media (hover: hover) {
+  .skill-card-motion:hover {
+    transform: translateY(-4px);
+    border-color: hsl(var(--border));
+    box-shadow: 0 14px 30px rgba(20, 37, 80, 0.09);
+  }
+
+  .skill-card-motion:hover .skill-card-motion__icon {
+    transform: rotate(-4deg) scale(1.055);
+    background-color: hsl(var(--primary) / 0.025);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

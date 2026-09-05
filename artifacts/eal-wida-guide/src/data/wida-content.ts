@@ -992,6 +992,164 @@ const LEVEL_CONTENT_BY_LANG: Record<string, WIDALevelContent[]> = {
       encouragement: "お子様は注目すべきことを成し遂げました。そして母国語 — 家族の言語 — は変わらぬ宝物です。",
     },
   ],
+  de: [
+    {
+      name: "Einstieg",
+      tagline: "Der Anfang — jedes neue Wort ist ein Erfolg!",
+      description: "Ihr Kind steht am Anfang seines Weges mit der englischen Sprache. Im Moment helfen Bilder, Gesten und die Familiensprache dabei, die Umgebung zu verstehen. Das ist völlig normal und bildet eine wichtige Grundlage.",
+      skills: {
+        listening: "Versteht einige wichtige Wörter und Wendungen, besonders mit Bildern, Gesten oder einer Vorführung. Ohne visuelle Unterstützung ist gesprochenes Englisch möglicherweise noch schwer verständlich.",
+        speaking: "Verwendet einzelne Wörter oder sehr kurze Wendungen. Kann zeigen, gestikulieren oder die Familiensprache nutzen. Fehler sind erwartbar und normal.",
+        reading: "Erkennt Buchstaben und einige häufige Wörter. Kann Bilder einfachen gedruckten Wörtern zuordnen.",
+        writing: "Schreibt Wörter oder kurze Wendungen ab. Kann Gedanken durch Zeichnungen ausdrücken. Englisches Schreiben findet auf Wortebene statt.",
+      },
+      supports: [
+        "Bilder, Schaubilder und Gesten bei allen Anweisungen",
+        "Zweisprachige Glossare oder Wörterbücher in der Familiensprache",
+        "Zusätzliche Zeit, um Englisch zu verarbeiten und zu antworten",
+        "Ein Sitzplatz nahe unterstützender Mitschüler oder der Lehrkraft",
+        "Die Familiensprache darf neben Englisch verwendet werden",
+      ],
+      homeTips: [
+        "Sprechen Sie täglich in Ihrer Familiensprache — das stärkt auch die Denkfähigkeiten für Englisch",
+        "Lesen Sie gemeinsam, auch in Ihrer Familiensprache — Begriffe und Wortschatz lassen sich übertragen",
+        "Zeigen und benennen Sie Dinge zu Hause in beiden Sprachen",
+        "Sehen Sie gemeinsam englische Kindersendungen oder Videos und sprechen Sie über das Gesehene",
+        "Feiern Sie jedes neue englische Wort — auch langsamer Fortschritt ist echter Fortschritt",
+      ],
+      encouragement: "Jedes englische Wort baut auf der starken Grundlage Ihrer Familiensprache auf. Sie sind die wichtigste Unterstützung Ihres Kindes.",
+    },
+    {
+      name: "Anfangsstufe",
+      tagline: "Mit jedem Satz wächst das Selbstvertrauen.",
+      description: "Ihr Kind beginnt, kurze englische Wendungen und einfache Sätze zu verwenden. Es versteht oft mehr, als es sagen kann, und verbindet englische Wörter zunehmend mit ihrer Bedeutung. Visuelle und sprachliche Unterstützung bleibt wichtig.",
+      skills: {
+        listening: "Versteht kurze, einfache Wendungen und vertraute Unterrichtsanweisungen, besonders mit visueller Unterstützung.",
+        speaking: "Verwendet kurze Wendungen und einfache Sätze. Kann die Familiensprache und Englisch mischen; das ist normal und gesund.",
+        reading: "Liest einfache Sätze mit vertrautem Wortschatz. Bilder und Schaubilder unterstützen das Verständnis.",
+        writing: "Schreibt mit Unterstützung einfache Sätze. Rechtschreib- und Grammatikfehler sind erwartbar, grundlegende Ideen werden verständlich.",
+      },
+      supports: [
+        "Weiterhin visuelle Hilfen neben geschriebener und gesprochener Sprache",
+        "Wichtige Wörter vor einer neuen Unterrichtseinheit einführen",
+        "Satzrahmen und Satzanfänge für Sprechen und Schreiben",
+        "Partnerlernen mit unterstützenden englischsprachigen Mitschülern",
+        "Unterstützung in der Familiensprache bei anspruchsvollen Inhalten",
+      ],
+      homeTips: [
+        "Sprechen Sie weiterhin Ihre Familiensprache — sie verwirrt nicht, sondern hilft",
+        "Bitten Sie Ihr Kind, in einer beliebigen Sprache von seinem Schultag zu erzählen",
+        "Benennen Sie gemeinsame Tätigkeiten wie Kochen oder Einkaufen auch auf Englisch",
+        "Schlagen Sie Wörter gemeinsam in einem zweisprachigen Wörterbuch oder einer App nach",
+        "Teilen Sie englische Bücher, Lieder oder Videos zu Themen, die Ihr Kind bereits liebt",
+      ],
+      encouragement: "Das Englisch Ihres Kindes wächst jeden Tag, auch wenn es sich nicht immer so anfühlt. Vertrauen Sie dem Prozess.",
+    },
+    {
+      name: "Entwicklung",
+      tagline: "Teil des Gesprächs — im Unterricht und darüber hinaus.",
+      description: "Ihr Kind kann einfache englische Gespräche über vertraute Themen führen und beteiligt sich zunehmend am Unterricht. Alltagssprache ist meist verständlich; die Fachsprache aus Büchern und Prüfungen braucht weiterhin Unterstützung.",
+      skills: {
+        listening: "Versteht allgemeine Unterrichtsgespräche und Alltagsthemen. Abstrakte Ideen oder schnelles Sprechen können noch schwierig sein.",
+        speaking: "Beteiligt sich an Gesprächen über vertraute Themen und verwendet komplexere Sätze, noch mit erkennbaren Fehlern.",
+        reading: "Versteht einfache Texte zu vertrauten Themen. Längere Texte und Fachwortschatz können Unterstützung erfordern.",
+        writing: "Schreibt kurze Absätze mit Anfang, Mitte und Ende. Trotz Fehlern werden die Ideen verständlich ausgedrückt.",
+      },
+      supports: [
+        "Grafische Organizer für Lese- und Schreibaufgaben",
+        "Wortschatz vor neuen Themen vorbereiten",
+        "Zusätzliche Zeit für Tests und schriftliche Aufgaben",
+        "Kooperative Gruppenarbeit mit klaren Rollen",
+        "Bei Bedarf unterstützte Fassungen altersgemäßer Texte",
+      ],
+      homeTips: [
+        "Stellen Sie offene Fragen wie „Was war heute interessant?“ statt Ja-Nein-Fragen",
+        "Lesen Sie gemeinsam auf Englisch oder in Ihrer Familiensprache — beides stärkt das Verständnis",
+        "Spielen Sie Wortspiele, Zuordnungsspiele oder einfache Kartenspiele",
+        "Lassen Sie Ihr Kind Ihnen etwas auf Englisch erklären — Lehren stärkt die Sprachflüssigkeit",
+        "Loben Sie Einsatz und Mut, nicht nur richtige Antworten",
+      ],
+      encouragement: "Ihr Kind wird zu einem echten Gesprächspartner. Selbstvertrauen und Englisch wachsen gemeinsam.",
+    },
+    {
+      name: "Ausbau",
+      tagline: "Englisch wird zum Werkzeug, nicht nur zur Herausforderung.",
+      description: "Ihr Kind verwendet Englisch in vielen Situationen recht flüssig. Es versteht den Großteil des Unterrichts und kann Ideen klar ausdrücken. Unterstützung ist vor allem bei komplexer, abstrakter Fachsprache nötig.",
+      skills: {
+        listening: "Versteht den größten Teil des Unterrichts und der Gespräche. Sehr technische oder abstrakte Sprache kann Unterstützung erfordern.",
+        speaking: "Kommuniziert klar über viele Themen und verwendet komplexere Satzstrukturen. Gelegentliche Fehler bleiben.",
+        reading: "Versteht die meisten altersgemäßen Texte. Dichte Fachtexte oder unbekannte Themen können schwierig sein.",
+        writing: "Schreibt geordnete Texte mit mehreren Absätzen. Ideen sind klar; Grammatik und Stil entwickeln sich weiter.",
+      },
+      supports: [
+        "Unterstützung beim Fachwortschatz in einzelnen Unterrichtsfächern",
+        "Rückmeldung zum Inhalt einer Arbeit vor der Grammatik",
+        "Gesprächsgruppen, in denen Fachsprache modelliert wird",
+        "Grafische Organizer für komplexe Leseaufgaben",
+        "Verschiedene Möglichkeiten, Wissen zu zeigen — nicht nur schriftlich",
+      ],
+      homeTips: [
+        "Sprechen Sie in einer beliebigen Sprache über Nachrichten oder Ereignisse in der Gemeinde",
+        "Ermutigen Sie zum Lesen aus Freude — jede Sprache zählt und stärkt das Denken",
+        "Bitten Sie Ihr Kind zu erklären, was es in der Schule lernt",
+        "Sehen Sie gemeinsam Dokumentationen oder Lernsendungen und sprechen Sie darüber",
+        "Feiern Sie die wachsende Selbstständigkeit Ihres Kindes",
+      ],
+      encouragement: "Das Englisch Ihres Kindes wird zu einer echten Stärke. Es leistet Bemerkenswertes.",
+      exitNote: "An unserer Schule verlassen Lernende das EAL-Programm in der Regel etwa auf WIDA-Stufe 4.0, wenn sie altersgemäße Lernaufgaben selbstständig bewältigen. Danach beobachten Lehrkräfte die weitere Entwicklung.",
+    },
+    {
+      name: "Übergang",
+      tagline: "Fast am Ziel — Englisch wird immer selbstverständlicher.",
+      description: "Ihr Kind kann sich in fast allen Situationen wirksam auf Englisch verständigen. Der verbleibende Entwicklungsbereich betrifft vor allem anspruchsvolle Fachsprache für komplexe Texte, Forschung und spezialisierte Fächer.",
+      skills: {
+        listening: "Versteht komplexe gesprochene Sprache einschließlich abstrakter Ideen, Humor und Nuancen. Braucht nur selten zusätzliche Unterstützung.",
+        speaking: "Spricht flüssig mit wenigen Fehlern und kann präsentieren, debattieren und komplexe Themen besprechen.",
+        reading: "Liest und analysiert altersgemäße Texte kritisch und bewältigt die meisten Fachinhalte selbstständig.",
+        writing: "Verfasst klar gegliederte, ausführliche Texte mit starkem Wortschatz und Stil. Kleine Fehler können in komplexen Strukturen bleiben.",
+      },
+      supports: [
+        "Weiterer Zugang zu Fachwortschatz in neuen Themengebieten",
+        "Gelegenheiten für längeres Schreiben und kritisches Denken",
+        "Rückmeldung zu anspruchsvoller Grammatik und Stil",
+        "Anspruchsvolle Gespräche zur Entwicklung mündlicher Fachsprache",
+        "Begleitung beim Übergang aus der formellen EAL-Förderung",
+      ],
+      homeTips: [
+        "Ihr Kind braucht vielleicht weniger direkte Sprachhilfe, doch Ihr Interesse bleibt sehr wichtig",
+        "Sprechen Sie in einer beliebigen Sprache über große Ideen, Ziele, Werte und die Zukunft",
+        "Ermutigen Sie zum Schreiben aus Freude: Tagebuch, Geschichten, Briefe oder Nachrichten",
+        "Finden Sie englische Bücher, Podcasts oder Filme zu Lieblingsthemen",
+        "Vertrauen Sie der wachsenden Selbstständigkeit und bleiben Sie neugierig und verbunden",
+      ],
+      encouragement: "Das Englisch Ihres Kindes ist eine echte Stärke. Sie haben etwas Außergewöhnliches unterstützt.",
+    },
+    {
+      name: "Zielstufe",
+      tagline: "Ein Meilenstein — und eine Fähigkeit fürs Leben.",
+      description: "Ihr Kind hat eine Englischkompetenz erreicht, die mit englischsprachigen Gleichaltrigen vergleichbar ist. Schulen beenden auf dieser Stufe meist die formelle EAL-Förderung. Das sprachliche Lernen geht dennoch weiter.",
+      skills: {
+        listening: "Versteht akademisches und soziales Englisch einschließlich komplexer, abstrakter und spezialisierter Sprache.",
+        speaking: "Kommuniziert in allen Situationen flüssig, genau und differenziert.",
+        reading: "Versteht anspruchsvolle Texte und kann Schlussfolgerungen ziehen, analysieren und kritisch bewerten.",
+        writing: "Schreibt klar, differenziert und stilbewusst und passt Texte an Zielgruppe und Zweck an.",
+      },
+      supports: [
+        "Mehrsprachigkeit weiterhin als schulische und persönliche Stärke anerkennen",
+        "Zugang zu anspruchsvollen Kursen — Leistung nicht begrenzen",
+        "Auf Wunsch Alphabetisierung in der Familiensprache unterstützen",
+        "Die Entwicklung ein bis zwei Jahre nach Ende der EAL-Förderung beobachten",
+      ],
+      homeTips: [
+        "Feiern Sie diesen Meilenstein — er ist eine echte Leistung",
+        "Pflegen und entwickeln Sie die Familiensprache weiter — Mehrsprachigkeit ist ein Geschenk fürs Leben",
+        "Bleiben Sie durch Gespräche, Lesen und gemeinsame Aktivitäten verbunden",
+        "Ermutigen Sie zu anspruchsvollen Lernmöglichkeiten — das Potenzial Ihres Kindes ist unbegrenzt",
+        "Erinnern Sie daran, dass zwei oder mehr Sprachen ein Grund zum Stolz sind",
+      ],
+      encouragement: "Ihr Kind hat Bemerkenswertes erreicht. Die Sprache Ihrer Familie bleibt dabei ein wertvoller Schatz.",
+    },
+  ],
 };
 
 export function getLevels(lang: string): WIDALevel[] {
@@ -1002,6 +1160,8 @@ export function getLevels(lang: string): WIDALevel[] {
 type Translations = {
   [lang: string]: {
     appTitle: string;
+    chooseLanguage: string;
+    skipToMain: string;
     appSubtitle: string;
     selectLevel: string;
     selectLevelHelp: string;
@@ -1013,6 +1173,10 @@ type Translations = {
     writingLabel: string;
     supportsTitle: string;
     homeTipsTitle: string;
+    schoolExampleLabel: string;
+    schoolExampleBody: string;
+    homeExampleLabel: string;
+    homeExampleBody: string;
     progressTitle: string;
     progressBody: string;
     teacherNoteTitle: string;
@@ -1034,6 +1198,8 @@ type Translations = {
 export const TRANSLATIONS: Translations = {
   en: {
     appTitle: "Multilingual Learner Family Guide",
+    chooseLanguage: "Choose language",
+    skipToMain: "Skip to main content",
     appSubtitle: "Learn what your child's English level means and discover practical ways to support language growth at home and at school.",
     selectLevel: "Choose your child's WIDA level",
     selectLevelHelp: "Use the level shown on your child's latest WIDA or ACCESS report.",
@@ -1045,6 +1211,10 @@ export const TRANSLATIONS: Translations = {
     writingLabel: "Writing",
     supportsTitle: "What helps at school",
     homeTipsTitle: "How you can help at home",
+    schoolExampleLabel: "What this can look like",
+    schoolExampleBody: "A teacher can model the support, show a brief example, and give the student a low-pressure way to join in.",
+    homeExampleLabel: "Try this at home",
+    homeExampleBody: "Keep it short and connected to everyday life. Your child can respond with words, pictures, gestures, or either language.",
     progressTitle: "What to know about progress over time",
     progressBody: "Every child develops English at their own pace. Research suggests conversational English may develop in 3–5 years, while academic English — the kind used in textbooks and tests — often takes 4–7 years or more. WIDA levels describe where your child is right now, not a fixed timeline. WIDA levels describe language development, while school program exit decisions may be based on local criteria.",
     teacherNoteTitle: "A note from your child's teacher",
@@ -1084,6 +1254,8 @@ export const TRANSLATIONS: Translations = {
   },
   ko: {
     appTitle: "다국어 학습자 가족 가이드",
+    chooseLanguage: "언어 선택",
+    skipToMain: "본문으로 바로가기",
     appSubtitle: "자녀의 영어 수준이 무엇을 의미하는지 이해하고, 가정과 학교에서 언어 성장을 지원할 수 있는 실질적인 방법을 알아보세요.",
     selectLevel: "자녀의 WIDA 레벨을 선택하세요",
     selectLevelHelp: "자녀의 최근 WIDA 또는 ACCESS 보고서에 표시된 레벨을 사용하세요.",
@@ -1095,6 +1267,10 @@ export const TRANSLATIONS: Translations = {
     writingLabel: "쓰기",
     supportsTitle: "학교에서 도움이 되는 것",
     homeTipsTitle: "가정에서 도울 수 있는 방법",
+    schoolExampleLabel: "이렇게 해볼 수 있어요",
+    schoolExampleBody: "교사는 지원 방법을 직접 보여주고, 짧은 예시를 제시하며, 학생이 부담 없이 참여할 수 있는 방법을 제공합니다.",
+    homeExampleLabel: "가정에서 해보세요",
+    homeExampleBody: "짧고 일상생활과 연결되도록 해보세요. 자녀는 단어, 그림, 몸짓 또는 어느 언어로든 대답할 수 있습니다.",
     progressTitle: "시간 경과에 따른 발전에 대해 알아야 할 사항",
     progressBody: "모든 어린이는 각자의 속도에 맞춰 영어를 발달시킵니다. 연구에 따르면 일상 회화 영어는 3~5년 안에 발달할 수 있지만, 교과서와 시험에 사용되는 학문적 영어는 종종 4~7년 이상 걸릴 수 있습니다. WIDA 레벨은 자녀의 현재 상태를 설명하는 것이지 정해진 일정을 나타내는 것이 아닙니다. WIDA 레벨은 언어 발달을 설명하며, 학교 프로그램 졸업 결정은 현지 기준에 따라 달라질 수 있습니다.",
     teacherNoteTitle: "선생님의 메시지",
@@ -1134,6 +1310,8 @@ export const TRANSLATIONS: Translations = {
   },
   zh: {
     appTitle: "多语言学习者家庭指南",
+    chooseLanguage: "选择语言",
+    skipToMain: "跳到主要内容",
     appSubtitle: "了解您孩子的英语水平意味着什么，并发现在家和在学校支持语言成长的实用方法。",
     selectLevel: "选择您孩子的 WIDA 水平",
     selectLevelHelp: "请使用孩子最近的 WIDA 或 ACCESS 报告中显示的水平。",
@@ -1145,6 +1323,10 @@ export const TRANSLATIONS: Translations = {
     writingLabel: "写作",
     supportsTitle: "在学校的帮助",
     homeTipsTitle: "您在家的帮助",
+    schoolExampleLabel: "实际操作示例",
+    schoolExampleBody: "老师可以示范这种支持方式，展示一个简短的例子，并让学生以没有压力的方式参与。",
+    homeExampleLabel: "在家试试这样做",
+    homeExampleBody: "保持简短，并与日常生活联系起来。孩子可以用词语、图片、手势或任何一种语言回应。",
     progressTitle: "关于随着时间进步的须知",
     progressBody: "每个孩子学习英语的速度都不同。研究表明，日常会话英语可能需要3-5年才能掌握，而学术英语（用于教科书和考试中的英语）通常需要4-7年或更长时间。WIDA水平描述的是您孩子目前所处的阶段，而不是固定的时间表。WIDA水平描述语言发展，而学校项目退出决定可能基于当地标准。",
     teacherNoteTitle: "来自孩子老师的留言",
@@ -1184,6 +1366,8 @@ export const TRANSLATIONS: Translations = {
   },
   es: {
     appTitle: "Guía Familiar para Estudiantes Multilingües",
+    chooseLanguage: "Elegir idioma",
+    skipToMain: "Ir al contenido principal",
     appSubtitle: "Conozca qué significa el nivel de inglés de su hijo y descubra maneras prácticas de apoyar el crecimiento del idioma en casa y en la escuela.",
     selectLevel: "Elija el nivel WIDA de su hijo",
     selectLevelHelp: "Use el nivel que aparece en el informe WIDA o ACCESS más reciente de su hijo.",
@@ -1195,6 +1379,10 @@ export const TRANSLATIONS: Translations = {
     writingLabel: "Escribir",
     supportsTitle: "Qué ayuda en la escuela",
     homeTipsTitle: "Cómo puede ayudar en casa",
+    schoolExampleLabel: "Así puede verse en la práctica",
+    schoolExampleBody: "El maestro puede modelar el apoyo, mostrar un ejemplo breve y ofrecer una manera de participar sin presión.",
+    homeExampleLabel: "Pruebe esto en casa",
+    homeExampleBody: "Manténgalo breve y conectado a la vida diaria. Su hijo puede responder con palabras, dibujos, gestos o en cualquiera de sus idiomas.",
     progressTitle: "Lo que debe saber sobre el progreso",
     progressBody: "Cada niño desarrolla el inglés a su propio ritmo. Las investigaciones sugieren que el inglés conversacional puede desarrollarse en 3 a 5 años, mientras que el inglés académico, el que se usa en libros de texto y exámenes, a menudo toma de 4 a 7 años o más. Los niveles de WIDA describen dónde está su hijo ahora mismo, no un plazo fijo. Los niveles WIDA describen el desarrollo del idioma, mientras que las decisiones de salida del programa escolar pueden basarse en criterios locales.",
     teacherNoteTitle: "Una nota del maestro de su hijo",
@@ -1234,6 +1422,8 @@ export const TRANSLATIONS: Translations = {
   },
   fr: {
     appTitle: "Guide Familial pour Apprenants Multilingues",
+    chooseLanguage: "Choisir la langue",
+    skipToMain: "Aller au contenu principal",
     appSubtitle: "Découvrez ce que signifie le niveau d'anglais de votre enfant et trouvez des façons concrètes de soutenir la croissance linguistique à la maison et à l'école.",
     selectLevel: "Choisissez le niveau WIDA de votre enfant",
     selectLevelHelp: "Utilisez le niveau indiqué dans le dernier rapport WIDA ou ACCESS de votre enfant.",
@@ -1245,6 +1435,10 @@ export const TRANSLATIONS: Translations = {
     writingLabel: "Écriture",
     supportsTitle: "Ce qui aide à l'école",
     homeTipsTitle: "Comment vous pouvez aider à la maison",
+    schoolExampleLabel: "Voici à quoi cela peut ressembler",
+    schoolExampleBody: "L'enseignant peut montrer ce soutien, donner un court exemple et proposer à l'élève une façon de participer sans pression.",
+    homeExampleLabel: "À essayer à la maison",
+    homeExampleBody: "Gardez cela court et lié à la vie quotidienne. Votre enfant peut répondre avec des mots, des images, des gestes ou dans l'une ou l'autre langue.",
     progressTitle: "Ce qu'il faut savoir sur les progrès dans le temps",
     progressBody: "Chaque enfant développe l'anglais à son propre rythme. Les recherches suggèrent que l'anglais conversationnel peut se développer en 3 à 5 ans, tandis que l'anglais académique — celui utilisé dans les manuels et les tests — prend souvent 4 à 7 ans ou plus. Les niveaux WIDA décrivent où se trouve votre enfant en ce moment, pas un calendrier fixe. Les niveaux WIDA décrivent le développement linguistique, tandis que les décisions de sortie du programme scolaire peuvent être basées sur des critères locaux.",
     teacherNoteTitle: "Un mot de l'enseignant de votre enfant",
@@ -1284,6 +1478,8 @@ export const TRANSLATIONS: Translations = {
   },
   ja: {
     appTitle: "多言語学習者家族ガイド",
+    chooseLanguage: "言語を選択",
+    skipToMain: "本文へ移動",
     appSubtitle: "お子様の英語レベルの意味を理解し、家庭と学校での言語の成長をサポートする実践的な方法を見つけましょう。",
     selectLevel: "お子様のWIDAレベルを選択してください",
     selectLevelHelp: "最新のWIDAまたはACCESSレポートに記載されたレベルを使用してください。",
@@ -1295,6 +1491,10 @@ export const TRANSLATIONS: Translations = {
     writingLabel: "書くこと",
     supportsTitle: "学校でのサポート",
     homeTipsTitle: "家庭でのサポート方法",
+    schoolExampleLabel: "具体的には",
+    schoolExampleBody: "教師は支援方法を実演し、短い例を示し、生徒が安心して参加できる方法を用意します。",
+    homeExampleLabel: "家庭で試してみましょう",
+    homeExampleBody: "短く、日常生活と結びつけましょう。お子様は言葉、絵、身ぶり、またはどちらの言語でも答えられます。",
     progressTitle: "時間の経過とともに進歩することについて知っておくべきこと",
     progressBody: "すべての子どもは自分のペースで英語を発達させます。研究によると、日常会話の英語は3〜5年で身につく可能性がありますが、教科書やテストで使われるような学術的な英語は、多くの場合4〜7年以上かかります。WIDAレベルはお子様が現在どの段階にいるかを示すものであり、決まったスケジュールではありません。WIDAレベルは言語の発達を表しており、学校プログラムの終了決定は現地の基準に基づく場合があります。",
     teacherNoteTitle: "お子様の先生からのメッセージ",
@@ -1329,6 +1529,62 @@ export const TRANSLATIONS: Translations = {
       {
         title: "このガイドの使い方は？",
         text: "お子様の現在のWIDAレベルを見つけて、対応する番号を選択してください。そのレベルで生徒が一般的にできることと、家族や学校が言語の継続的な成長をサポートする方法を確認できます。",
+      },
+    ],
+  },
+  de: {
+    appTitle: "Familienratgeber für mehrsprachige Lernende",
+    chooseLanguage: "Sprache auswählen",
+    skipToMain: "Zum Hauptinhalt springen",
+    appSubtitle: "Erfahren Sie, was die Englischstufe Ihres Kindes bedeutet und wie Sie die Sprachentwicklung zu Hause und in der Schule praktisch unterstützen können.",
+    selectLevel: "Wählen Sie die WIDA-Stufe Ihres Kindes",
+    selectLevelHelp: "Verwenden Sie die Stufe aus dem neuesten WIDA- oder ACCESS-Bericht Ihres Kindes.",
+    selectLevelEmpty: "Wählen Sie oben eine Stufe, um ihre Bedeutung und passende Unterstützung zu sehen.",
+    levelLabel: "Stufe",
+    listeningLabel: "Hören",
+    speakingLabel: "Sprechen",
+    readingLabel: "Lesen",
+    writingLabel: "Schreiben",
+    supportsTitle: "Was in der Schule hilft",
+    homeTipsTitle: "So können Sie zu Hause helfen",
+    schoolExampleLabel: "So kann das aussehen",
+    schoolExampleBody: "Die Lehrkraft kann die Unterstützung vormachen, ein kurzes Beispiel zeigen und eine sichere Möglichkeit zur Beteiligung anbieten.",
+    homeExampleLabel: "Das können Sie zu Hause ausprobieren",
+    homeExampleBody: "Halten Sie es kurz und alltagsnah. Ihr Kind kann mit Wörtern, Bildern, Gesten oder in beiden Sprachen antworten.",
+    progressTitle: "Was Sie über die Entwicklung im Laufe der Zeit wissen sollten",
+    progressBody: "Jedes Kind entwickelt Englisch in seinem eigenen Tempo. Alltagssprache kann sich laut Forschung in 3–5 Jahren entwickeln; akademisches Englisch aus Lehrbüchern und Prüfungen benötigt oft 4–7 Jahre oder länger. WIDA-Stufen beschreiben den aktuellen Entwicklungsstand, keinen festen Zeitplan. Entscheidungen über das Ende schulischer Förderung können auf lokalen Kriterien beruhen.",
+    teacherNoteTitle: "Eine Nachricht von der Lehrkraft Ihres Kindes",
+    teacherNotePlaceholder: "Lehrkräfte: Fügen Sie vor dem Drucken eine persönliche Nachricht für diese Familie hinzu.",
+    printButton: "Zusammenfassung drucken",
+    disclaimer: "Dieser Ratgeber bietet allgemeine Orientierung und ersetzt weder eine schulische Beurteilung noch das professionelle Urteil der Lehrkraft.",
+    independentDisclaimer: "Diese unabhängige Ressource wurde von Federico Orozco erstellt, um Familien beim Verständnis der Entwicklung mehrsprachiger Lernender zu unterstützen. Sie ist nicht mit WIDA verbunden und wird nicht von WIDA empfohlen.",
+    encouragementLabel: "Eine ermutigende Nachricht",
+    exitLevelSubtitle: "Übliche EAL-Austrittsstufe an unserer Schule",
+    exitLevelBadge: "Austrittsstufe",
+    continuumNote: "Die Stufen 5 und 6 gehören zum erweiterten WIDA-Kontinuum. Sie sind für den Austritt aus dem örtlichen EAL-Programm nicht erforderlich, beschreiben aber die weitere Entwicklung hin zu sicherem akademischem Englisch.",
+    schoolPolicyTitle: "Zum Austrittsverfahren unseres EAL-Programms",
+    schoolPolicyBullets: [
+      "Lernende verlassen das EAL-Programm in der Regel etwa auf WIDA-Stufe 4.0.",
+      "Die Entscheidung berücksichtigt Unterrichtsleistung, Sprachgebrauch und Einschätzungen der Lehrkräfte — nicht nur den WIDA-Wert.",
+      "Sprachentwicklung geht nach dem Programmaustritt weiter. Lehrkräfte beobachten den Fortschritt.",
+    ],
+    startHereTitle: "So funktionieren die WIDA-Stufen",
+    startHereSections: [
+      {
+        title: "Was ist WIDA?",
+        text: "WIDA ist ein Rahmen zur Sprachentwicklung, den viele Schulen nutzen, um mehrsprachige Lernende beim Aufbau von Englisch im Hören, Sprechen, Lesen und Schreiben zu verstehen und zu unterstützen.",
+      },
+      {
+        title: "Warum erhält mein Kind EAL-Unterstützung?",
+        text: "Ihr Kind erhält EAL-Unterstützung, weil es akademisches Englisch entwickelt und gleichzeitig altersgemäße Fachinhalte lernt. Die Förderung erleichtert den Zugang zum Unterricht, während die Sprachfähigkeiten wachsen.",
+      },
+      {
+        title: "Ein WIDA-Wert ist keine Schulnote",
+        text: "WIDA-Werte messen weder Intelligenz noch Einsatz oder Potenzial. Sie zeigen den aktuellen Stand der akademischen Englischentwicklung. Sprachwachstum braucht Zeit und verläuft bei jedem Kind anders.",
+      },
+      {
+        title: "Wie verwende ich diesen Ratgeber?",
+        text: "Suchen Sie die aktuelle WIDA-Stufe Ihres Kindes und wählen Sie die entsprechende Zahl. Sie sehen typische Fähigkeiten sowie Möglichkeiten, wie Familie und Schule die weitere Sprachentwicklung unterstützen können.",
       },
     ],
   },

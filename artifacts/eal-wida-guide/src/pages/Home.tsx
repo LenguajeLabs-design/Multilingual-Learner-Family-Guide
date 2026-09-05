@@ -28,6 +28,7 @@ export default function Home() {
       zh: "zh-Hans",
       ja: "ja",
       ko: "ko",
+      de: "de",
     };
 
     document.documentElement.lang = documentLanguages[lang] ?? "en";
@@ -41,7 +42,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <a href="#main-content" className="skip-link no-print">
-        Skip to main content
+        {t.skipToMain}
       </a>
       <Navbar lang={lang} setLang={setLang} onPrint={handlePrint} showPrint={selectedLevel !== undefined} t={t} />
       
@@ -88,6 +89,7 @@ export default function Home() {
               <LevelDetail
                 level={selectedLevel}
                 t={t}
+                lang={lang}
               />
             </section>
 

@@ -31,11 +31,11 @@ export function Navbar({
       
       <div className="flex items-center gap-3 sm:gap-4">
         <label htmlFor="language-selector" className="sr-only">
-          Choose language
+          {t.chooseLanguage}
         </label>
         <select 
           id="language-selector"
-          aria-label="Choose language"
+          aria-label={t.chooseLanguage}
           value={lang} 
           onChange={(e) => setLang(e.target.value)}
           className="min-h-11 text-sm border border-border rounded-[var(--radius-control)] bg-surface-muted py-2 px-3 text-foreground transition-colors font-semibold hover:bg-secondary"
@@ -46,6 +46,7 @@ export function Navbar({
           <option value="zh">中文</option>
           <option value="ja">日本語</option>
           <option value="ko">한국어</option>
+          <option value="de">Deutsch</option>
         </select>
 
         {showPrint && (
